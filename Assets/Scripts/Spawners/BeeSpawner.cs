@@ -1,48 +1,49 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Rendering.VirtualTexturing;
 
-public class Hive : MonoBehaviour, IDestination, ISpawner
+public class BeeSpawner : MonoBehaviour, ISpawner
 {
+    // Hive
+    Hive hive;
+
     // Bees
     [SerializeField] int maxBees = 1;
     int numBees = 0;
     private List<Bee> bees = new List<Bee>();
     [SerializeField] GameObject beePrefab;
 
-    // Events
-    public UnityEvent beeSpawned;
-    public UnityEvent beeKilled;
-
     // Debugging
-    [SerializeField] bool debugging = false;
+    [Header("Debugging")]
+    [SerializeField] bool printMethodCalls = false;
+    [SerializeField] bool spawnBeeOnStart = false;
 
     #region Unity
 
     private void Start()
     {
+        // Initialize bees
         for (int i = 0; i < maxBees; i++) AddBee();
 
-        Invoke(nameof(Spawn), 1f);
+        if(spawnBeeOnStart) Invoke(nameof(Spawn), 1f);
     }
 
     private void OnDestroy()
     {
-        for(int i = 0; i < maxBees; i++) RemoveBee();
+        for (int i = 0; i < maxBees; i++) RemoveBee();
     }
 
     #endregion
 
-    #region Bee List
+    #region BeeSpawner
 
     /// <summary>
     /// Adds a bee to the list.
     /// </summary>
     private void AddBee()
     {
-        if (debugging) Console.WriteLine("Hive::AddBee");
+        if (printMethodCalls) Console.WriteLine("Hive::AddBee");
 
         GameObject beeObj = Instantiate(beePrefab, transform);
         Bee newBee = beeObj.GetComponent<Bee>();
@@ -67,20 +68,20 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// <exception cref="Exception">Bee count did not match expected after computations.</exception>
     public void SetMaxBees(int count)
     {
-        if (debugging) Debug.Log("Hive::SetMaxBees");
+        if (printMethodCalls) Debug.Log("Hive::SetMaxBees");
 
         if (count < 0) count = 0;       // Input correction.
-        if(count == maxBees) return;    // Do nothing scenario
+        if (count == maxBees) return;    // Do nothing scenario
 
         // Count less than max bees
-        if(count < maxBees)
+        if (count < maxBees)
         {
-            for(int i = maxBees; i > count; i--) RemoveBee();
+            for (int i = maxBees; i > count; i--) RemoveBee();
         }
         // Count more than max bees
-        else if(count > maxBees)
+        else if (count > maxBees)
         {
-            for(int i = maxBees; i < count; i++) AddBee();
+            for (int i = maxBees; i < count; i++) AddBee();
         }
 
         if (bees.Count != count) throw new Exception("Max bees did not end up matching set value.\nDesired value: " + count + "\nActual value: " + bees.Count);
@@ -91,25 +92,21 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// Retrieves the max number of bees.
     /// </summary>
     /// <returns></returns>
-    public int GetMaxBees() {
-        if (debugging) Debug.Log("Hive::GetMaxBees");
+    public int GetMaxBees()
+    {
+        if (printMethodCalls) Debug.Log("Hive::GetMaxBees");
 
         return maxBees;
     }
 
-    #endregion
-
-    #region IDestination
-
-    /// <summary>
-    /// Transforms the 3D position into a 2D position.
-    /// </summary>
-    /// <returns>Hive position.</returns>
-    public Vector2 GetPosition()
+    public void SetHive(Hive hive)
     {
-        if (debugging) Debug.Log("Hive::GetPosition");
+        this.hive = hive;
+    }
 
-        return new Vector2(transform.position.x, transform.position.y);
+    public Hive GetHive()
+    {
+        return hive;
     }
 
     #endregion
@@ -121,7 +118,7 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// </summary>
     public void Spawn()
     {
-        if (debugging) Debug.Log("Hive::Spawn");  
+        if (printMethodCalls) Debug.Log("Hive::Spawn");
 
         if (numBees < maxBees)
         {
@@ -135,9 +132,9 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// <param name="count">Number of bees to spawn.</param>
     public void Spawn(int count)
     {
-        if (debugging) Debug.Log("Hive::Spawn(count)");
+        if (printMethodCalls) Debug.Log("Hive::Spawn(count)");
 
-        for (int i =  0; i < count; i++)
+        for (int i = 0; i < count; i++)
             Spawn();
     }
 
@@ -146,7 +143,7 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// </summary>
     public void Kill()
     {
-        if (debugging) Debug.Log("Hive::Kill");
+        if (printMethodCalls) Debug.Log("Hive::Kill");
 
         if (numBees == 0) return;
 
@@ -164,7 +161,7 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// <param name="count">Number of bees to kill.</param>
     public void Kill(int count)
     {
-        if (debugging) Debug.Log("Hive::Kill(count)");
+        if (printMethodCalls) Debug.Log("Hive::Kill(count)");
 
         for (int i = 0; i < count; i++) Kill();
     }
@@ -174,9 +171,20 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
     /// </summary>
     public void KillAll()
     {
-        if (debugging) Debug.Log("Hive::KillAll");
+        if (printMethodCalls) Debug.Log("Hive::KillAll");
 
         Kill(numBees);
+    }
+
+    /// <summary>
+    /// Transforms the 3D position into a 2D position.
+    /// </summary>
+    /// <returns>Hive position.</returns>
+    public Vector2 GetPosition()
+    {
+        if (printMethodCalls) Debug.Log("Hive::GetPosition");
+
+        return new Vector2(transform.position.x, transform.position.y);
     }
 
     #endregion

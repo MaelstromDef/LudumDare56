@@ -93,6 +93,7 @@ public class FlowerManager : MonoBehaviour, ISpawner
     {
         GameObject flowerObj = Instantiate(flowerPrefab, transform);
         Flower flower = flowerObj.GetComponent<Flower>();
+        flower.SetSpawner(this);
         flower.Spawn();
         unclaimedFlowers.Enqueue(flower);
     }
