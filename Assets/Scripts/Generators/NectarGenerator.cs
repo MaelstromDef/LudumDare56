@@ -7,15 +7,20 @@ public class NectarGenerator : MonoBehaviour, IGenerator
     public UnityEvent<int> nectarGenerated;
 
     // Generation
+    [Header("Nectar Generation")]
     [SerializeField] float nectarGenerationTime = 1.0f;
     [SerializeField] int nectarGenerationYield = 1;
     float stopwatch = 0;
     bool generate = true;
 
+    [SerializeField] int maxNectar = 10;
+    [SerializeField] bool capNectar = true;
+
     // Yield
     int nectar = 0;
 
     // Debugging
+    [Header("Debugging")]
     [SerializeField] bool debugging = false;
 
     #region Unity
@@ -56,6 +61,8 @@ public class NectarGenerator : MonoBehaviour, IGenerator
     {
         stopwatch -= nectarGenerationTime;
         nectar += nectarGenerationYield;
+
+        if (capNectar && nectar > maxNectar) nectar = maxNectar;
 
         nectarGenerated.Invoke(nectar);
 
