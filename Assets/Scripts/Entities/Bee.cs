@@ -15,6 +15,10 @@ public class Bee : MonoBehaviour, IEntity
 
     [SerializeField] float destinationPauseTime = 1.0f;
 
+    // Flowers
+
+
+    // Debugging
     [Header("Debugging")]
     [SerializeField] bool debugging = false;
 
