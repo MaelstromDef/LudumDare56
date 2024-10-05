@@ -25,17 +25,15 @@ public class Bee : MonoBehaviour, IEntity
     // Claims a flower from global flower pool
     IDestination FindFlower()
     {
-        Console.WriteLine("FIND FLOWER");
+        destination = FlowerManager.instance.ClaimFlower();
         return destination;
-        throw new System.NotImplementedException();
     }
 
     // Releases claim to flower from global flower pool
     void ReleaseFlower()
     {
-        Console.WriteLine("RELEASE FLOWER");
-        return;
-        throw new System.NotImplementedException ();
+        if (!(destination is Flower)) return;
+        FlowerManager.instance.ReleaseFlower((Flower)destination);
     }
 
     #endregion

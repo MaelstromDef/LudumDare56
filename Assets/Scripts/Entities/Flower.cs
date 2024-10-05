@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Flower : MonoBehaviour, IEntity
+public class Flower : MonoBehaviour, IEntity, IDestination
 {
     public void Deactivate()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(false);
     }
 
     public IDestination GetDestination()
