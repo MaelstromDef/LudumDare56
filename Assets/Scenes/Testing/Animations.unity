@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301517d8c62c0204389381d908aecfb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBees: 1
+  maxBees: 20
   beePrefab: {fileID: 383601517138216831, guid: 512adf244f1fde247ab28119365ece1d, type: 3}
   printMethodCalls: 1
   spawnBeeOnStart: 0
@@ -352,9 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c39c7fed172b04cb70d55e4ca1fce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFlowers: 1
+  maxFlowers: 7
   flowerPrefab: {fileID: 4022778515862365817, guid: 780e4ad28ea7cd3409f57c042b346cd7, type: 3}
   respawnDelay: 1
+  debugging: 0
 --- !u!4 &1263216339
 Transform:
   m_ObjectHideFlags: 0
