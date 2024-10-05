@@ -17,7 +17,7 @@ public class Bee : MonoBehaviour, IEntity
     [SerializeField] float destinationPauseTime = 1.0f;
 
     // Flowers
-
+    int collectedNectar = 0;
 
     // Debugging
     [Header("Debugging")]
@@ -48,6 +48,7 @@ public class Bee : MonoBehaviour, IEntity
     void ReleaseFlower()
     {
         if (!(destination is Flower)) return;
+        collectedNectar += ((Flower)destination).CollectNectar();
         FlowerManager.instance.ReleaseFlower((Flower)destination);
     }
 
@@ -63,12 +64,13 @@ public class Bee : MonoBehaviour, IEntity
         // Find hive
         if(destination is Hive)
         {
+            ((BeeSpawner)spawner).GetHive().AddNectar(collectedNectar);
             Kill();
         }
         // Kill self
         else if(destination is Flower)
         {
-            FlowerManager.instance.Remove((Flower)destination);
+            ReleaseFlower();
             FindHive();
             move = true;
         }

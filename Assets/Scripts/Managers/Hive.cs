@@ -71,6 +71,8 @@ public class Hive : MonoBehaviour, IDestination
     public void AddNectar(int amount)
     {
         nectar += amount;
+
+        if (debugging) Debug.Log("Hive::AddNectar\nNectar:\t" + nectar);
     }
 
     public void SetNectar(int nectar)

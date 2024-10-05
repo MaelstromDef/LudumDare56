@@ -25,9 +25,9 @@ public class Flower : MonoBehaviour, IEntity, IDestination
         return new Vector2(transform.position.x, transform.position.y);
     }
 
-    public float CollectNectar()
+    public int CollectNectar()
     {
-        throw new System.NotImplementedException();
+        return nectarGenerator.ClaimFullYield();
     }
 
     #endregion

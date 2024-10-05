@@ -49,6 +49,8 @@ MonoBehaviour:
       m_Calls: []
   nectarGenerationTime: 1
   nectarGenerationYield: 1
+  maxNectar: 10
+  capNectar: 0
   debugging: 0
 --- !u!1 &4022778515862365817
 GameObject:
