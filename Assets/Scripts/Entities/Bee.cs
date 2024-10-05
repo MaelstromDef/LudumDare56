@@ -12,6 +12,7 @@ public class Bee : MonoBehaviour, IEntity
     // Values
     [Header("Bee Parameters")]
     [SerializeField] float speed = 1.0f;
+    [SerializeField] int flowersToVisit = 1;
     bool move = true;
 
     [SerializeField] float destinationPauseTime = 1.0f;
@@ -61,18 +62,19 @@ public class Bee : MonoBehaviour, IEntity
     {
         if (debugging) Debug.Log("Bee::DestinationReached");
 
-        // Find hive
-        if(destination is Hive)
+        if(destination is Flower)
+        {
+            ReleaseFlower();
+            flowersToVisit--;
+
+            if(flowersToVisit > 0) FindFlower();
+            else FindHive();
+
+            move = true;
+        }else if(destination is Hive)
         {
             ((BeeSpawner)spawner).GetHive().AddNectar(collectedNectar);
             Kill();
-        }
-        // Kill self
-        else if(destination is Flower)
-        {
-            ReleaseFlower();
-            FindHive();
-            move = true;
         }
     }
 
