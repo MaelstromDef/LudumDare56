@@ -7,9 +7,9 @@ using UnityEngine.Events;
 public class Hive : MonoBehaviour, IDestination, ISpawner
 {
     // Bees
-    int maxBees;
-    int numBees;
-    private List<Bee> bees;
+    [SerializeField] int maxBees = 1;
+    int numBees = 0;
+    private List<Bee> bees = new List<Bee>();
     [SerializeField] GameObject beePrefab;
 
     // Events
@@ -18,6 +18,47 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
 
     // Debugging
     [SerializeField] bool debugging = false;
+
+    #region Unity
+
+    private void Start()
+    {
+        for (int i = 0; i < maxBees; i++) AddBee();
+
+        Invoke(nameof(Spawn), 1f);
+    }
+
+    private void OnDestroy()
+    {
+        for(int i = 0; i < maxBees; i++) RemoveBee();
+    }
+
+    #endregion
+
+    #region Bee List
+
+    /// <summary>
+    /// Adds a bee to the list.
+    /// </summary>
+    private void AddBee()
+    {
+        if (debugging) Console.WriteLine("Hive::AddBee");
+
+        GameObject beeObj = Instantiate(beePrefab, transform);
+        Bee newBee = beeObj.GetComponent<Bee>();
+        newBee.SetSpawner(this);
+        newBee.Deactivate();
+        bees.Add(newBee);
+    }
+
+    /// <summary>
+    /// Removes a bee from the list.
+    /// </summary>
+    private void RemoveBee()
+    {
+        if (bees[bees.Count - 1] != null && bees[bees.Count - 1].isActiveAndEnabled) bees[bees.Count - 1].Kill();
+        bees.RemoveAt(bees.Count - 1);
+    }
 
     /// <summary>
     /// Sets the max number of bees and loads in inactive bees.
@@ -34,21 +75,12 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
         // Count less than max bees
         if(count < maxBees)
         {
-            for(int i = maxBees; i > count; i--)
-            {
-                if(bees[bees.Count - 1] != null && bees[bees.Count - 1].isActiveAndEnabled) bees[bees.Count - 1].Kill();
-                bees.RemoveAt(bees.Count - 1);
-            }
+            for(int i = maxBees; i > count; i--) RemoveBee();
         }
         // Count more than max bees
         else if(count > maxBees)
         {
-            for(int i = maxBees; i < count; i++)
-            {
-                Bee newBee = Instantiate(beePrefab, transform, false).GetComponent<Bee>();
-                newBee.Deactivate();
-                bees.Add(newBee);
-            }
+            for(int i = maxBees; i < count; i++) AddBee();
         }
 
         if (bees.Count != count) throw new Exception("Max bees did not end up matching set value.\nDesired value: " + count + "\nActual value: " + bees.Count);
@@ -64,6 +96,8 @@ public class Hive : MonoBehaviour, IDestination, ISpawner
 
         return maxBees;
     }
+
+    #endregion
 
     #region IDestination
 

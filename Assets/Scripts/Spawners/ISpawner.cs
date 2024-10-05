@@ -8,4 +8,6 @@ public interface ISpawner
     public void Kill();
     public void Kill(int count);
     public void KillAll();
+
+    public Vector2 GetPosition();
 }
