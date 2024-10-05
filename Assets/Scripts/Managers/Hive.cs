@@ -29,11 +29,11 @@ public class Hive : MonoBehaviour, IDestination
     private void Start()
     {
         // Initialize Bee Spawner.
-        beeSpawner = gameObject.AddComponent<BeeSpawner>();
+        beeSpawner = gameObject.GetComponentInChildren<BeeSpawner>();
         beeSpawner.SetHive(this);
 
         // Initialize Honey Generator.
-        honeyGenerator = gameObject.AddComponent<HoneyGenerator>();
+        honeyGenerator = gameObject.GetComponentInChildren<HoneyGenerator>();
         honeyGenerator.SetHive(this);
         honeyGenerator.SetGeneration(false);
     }

@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour, IEntity, IDestination
 {
-    // Flower
+    // Generators
+    NectarGenerator nectarGenerator;
 
     // Spawner
     ISpawner spawner;
 
 
     #region Unity
+
+    private void Start()
+    {
+        nectarGenerator = GetComponentInChildren<NectarGenerator>();
+    }
 
     #endregion
 
