@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FlowerManager : MonoBehaviour, ISpawner
@@ -9,9 +10,14 @@ public class FlowerManager : MonoBehaviour, ISpawner
 
     // Flowers
     [SerializeField] int maxFlowers = 1;
-    int numFlowers = 0;
     [SerializeField] GameObject flowerPrefab;
-    List<Flower> flowers = new List<Flower>();
+
+    Queue<Flower> unclaimedFlowers = new Queue<Flower>();
+    Queue<Flower> claimedFlowers = new Queue<Flower>();    
+
+    // Values
+    [SerializeField] float respawnDelay = 1f;
+    bool keepDead = false;
 
     #region Unity
 
@@ -34,6 +40,29 @@ public class FlowerManager : MonoBehaviour, ISpawner
 
     #endregion
 
+    #region Flowers
+
+    public Flower ClaimFlower()
+    {
+        Flower flower = unclaimedFlowers.Dequeue();
+        claimedFlowers.Enqueue(flower);
+        return flower;
+    }
+
+    public void ReleaseFlower(Flower flower)
+    {
+        Queue<Flower> temp = new Queue<Flower>();
+        while(claimedFlowers.Count > 0)
+        {
+            Flower fl = claimedFlowers.Dequeue();
+            if (fl != flower) temp.Enqueue(fl);
+        }
+
+        unclaimedFlowers.Enqueue(flower);
+    }
+
+    #endregion
+
     #region ISpawner
 
     public Vector2 GetPosition()
@@ -43,7 +72,8 @@ public class FlowerManager : MonoBehaviour, ISpawner
 
     public void Kill()
     {
-        flowers[--numFlowers].Kill();
+        claimedFlowers.Dequeue().Kill();
+        if (!keepDead) Invoke(nameof(Spawn), respawnDelay);
     }
 
     public void Kill(int count)
@@ -53,17 +83,18 @@ public class FlowerManager : MonoBehaviour, ISpawner
 
     public void KillAll()
     {
-        Kill(numFlowers);
+        keepDead = true;
+        Kill(maxFlowers);
+
+        while (unclaimedFlowers.Count > 0) unclaimedFlowers.Dequeue().Kill();
     }
 
     public void Spawn()
     {
         GameObject flowerObj = Instantiate(flowerPrefab, transform);
-        Flower newFlower = flowerObj.GetComponent<Flower>();
-        newFlower.Spawn();
-        
-        flowers.Add(newFlower);
-        numFlowers++;
+        Flower flower = flowerObj.GetComponent<Flower>();
+        flower.Spawn();
+        unclaimedFlowers.Enqueue(flower);
     }
 
     public void Spawn(int count)
