@@ -38,6 +38,12 @@ public class Hive : MonoBehaviour, IDestination
         honeyGenerator.SetGeneration(false);
     }
 
+    private void OnMouseDown()
+    {
+        if (debugging) Debug.Log("Hive::OnMouseDown");
+        beeSpawner.Spawn();
+    }
+
     #endregion
 
     #region Hive

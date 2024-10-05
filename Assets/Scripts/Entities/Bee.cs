@@ -9,24 +9,30 @@ public class Bee : MonoBehaviour, IEntity
     IDestination destination;
 
     // Values
+    [Header("Bee Parameters")]
     [SerializeField] float speed = 1.0f;
+    bool move = true;
+
+    [SerializeField] float destinationPauseTime = 1.0f;
+
+    [Header("Debugging")]
+    [SerializeField] bool debugging = false;
 
     #region Unity
 
     private void Update()
     {
-        Move();
+        if(move) Move();
     }
 
     #endregion
 
-    #region Bee specific
+    #region Bee
 
     // Claims a flower from global flower pool
-    IDestination FindFlower()
+    void FindFlower()
     {
-        destination = FlowerManager.instance.ClaimFlower();
-        return destination;
+        SetDestination(FlowerManager.instance.ClaimFlower());
     }
 
     // Releases claim to flower from global flower pool
@@ -34,6 +40,29 @@ public class Bee : MonoBehaviour, IEntity
     {
         if (!(destination is Flower)) return;
         FlowerManager.instance.ReleaseFlower((Flower)destination);
+    }
+
+    void FindHive()
+    {
+        SetDestination(destination = ((BeeSpawner)spawner).GetHive());
+    }
+
+    void FindNextDestination()
+    {
+        if (debugging) Debug.Log("Bee::FindNextDestination");
+
+        // Find hive
+        if(destination is Hive)
+        {
+            ReleaseFlower();
+            Kill();
+        }
+        // Kill self
+        else if(destination is Flower)
+        {
+            FindHive();
+            move = true;
+        }
     }
 
     #endregion
@@ -54,8 +83,7 @@ public class Bee : MonoBehaviour, IEntity
         // Set initial bee values
         Vector2 spawnerPos = spawner.GetPosition();
         transform.position.Set(spawnerPos.x, spawnerPos.y, transform.position.z);
-        destination = FindFlower();
-        transform.right = destination.GetPosition() - this.GetPosition();   // Possibly have to force z to be 0, if buggy look into. Also might need a dif direction.
+        FindFlower();
 
         // Activate
         gameObject.SetActive(true);
@@ -84,7 +112,16 @@ public class Bee : MonoBehaviour, IEntity
 
     public void Move()
     {
-        transform.position += transform.right * speed * Time.deltaTime;     // Possibly needs a dif direction.
+        float moveDistance = speed * Time.deltaTime;
+        float actualDistance = (destination.GetPosition() - this.GetPosition()).magnitude;
+        if (moveDistance > actualDistance)
+        {
+            move = false;
+            moveDistance = actualDistance;
+            Invoke(nameof(FindNextDestination), destinationPauseTime);
+        }
+
+        transform.position += transform.right * moveDistance;
     }
 
     public IDestination GetDestination()
@@ -95,6 +132,7 @@ public class Bee : MonoBehaviour, IEntity
     public void SetDestination(IDestination destination)
     {
         this.destination = destination;
+        transform.right = destination.GetPosition() - this.GetPosition();   // Possibly have to force z to be 0, if buggy look into. Also might need a dif direction.
     }
 
     #endregion
