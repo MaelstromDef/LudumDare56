@@ -2,10 +2,18 @@ using UnityEngine;
 
 public interface IEntity
 {
-    Vector2 FindFlower();   // Finds the nearest flower
-    Vector2 Move();         // Moves towards active destination
+    // Spawner
+    ISpawner GetSpawner();
+    void SetSpawner(ISpawner spawner);
 
-    // Hive
-    void SetHive(GameObject hive);
-    GameObject GetHive();
+    void Spawn();           // Activates the entity.
+    void Deactivate();      // Makes sure the entity isn't rendered or doing computations.
+    void Kill();            // Kills this entity.
+
+    // Destination
+    IDestination GetDestination();
+    void SetDestination(IDestination destination);
+
+    void Move();         // Moves towards active destination
+    Vector2 GetPosition();  // Returns 2D position.
 }
