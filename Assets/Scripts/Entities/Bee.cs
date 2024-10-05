@@ -1,4 +1,5 @@
 using System;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -21,6 +22,8 @@ public class Bee : MonoBehaviour, IEntity
     // Debugging
     [Header("Debugging")]
     [SerializeField] bool debugging = false;
+
+    int dir;
 
     #region Unity
 
@@ -144,6 +147,19 @@ public class Bee : MonoBehaviour, IEntity
     {
         this.destination = destination;
         transform.right = destination.GetPosition() - this.GetPosition();   // Possibly have to force z to be 0, if buggy look into. Also might need a dif direction.
+        dir = MovementDirection(destination);
+        int currentDir = Math.Sign(gameObject.transform.localScale.y);
+        if (dir != currentDir) gameObject.transform.localScale.Set(transform.localScale.x * 1, transform.localScale.y * -1, transform.localScale.z); ;
+
+    }
+
+    public int MovementDirection(IDestination destination) 
+    {
+        this.destination = destination;
+        if (destination.GetPosition().x - this.GetPosition().x < 0) {
+            return -1;
+        } else return 1;
+
     }
 
     #endregion
