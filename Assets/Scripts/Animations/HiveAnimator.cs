@@ -13,4 +13,9 @@ public class HiveAnimator : MonoBehaviour
     {
         hiveAnimator.SetTrigger("isClicked");
     }
+
+    public void ActivateGeneratonIdle(bool isGenerating) {
+        if (isGenerating) hiveAnimator.SetTrigger("generatingHoney");
+        else hiveAnimator.ResetTrigger("generatingHoney");
+    }
 }

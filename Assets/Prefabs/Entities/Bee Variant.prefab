@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: debugging
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 222780612250917566, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
+      propertyPath: flowersToVisit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1889929801711277146, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
       propertyPath: m_Name
       value: Bee Variant

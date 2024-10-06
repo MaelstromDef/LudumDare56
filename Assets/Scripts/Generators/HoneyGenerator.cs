@@ -102,7 +102,7 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
 
         if (debugging) Debug.Log("HoneyGenerator::Generate\nHoney:\t" + honey);
 
-        hive.SetSprite(GetGeneration());
+       
     }
 
     public float GetGenerationTime()
@@ -129,6 +129,7 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
     {
         stopwatch = 0;
         generate = shouldGenerate;
+        hive.SetSprite(generate);
     }
 
     #endregion
