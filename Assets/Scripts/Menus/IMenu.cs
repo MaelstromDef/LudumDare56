@@ -4,6 +4,9 @@ using UnityEngine;
 
 public interface IMenu
 {
+    public void Open();                             // Opens the menu.
+    public void Close();                            // Closes the menu.
+
     public List<IMenu> GetSubMenus();               // Gets a list of any sub menus (we probably will never need this)
 
     public int GetPageSize();                       // Gets the size of each page.
