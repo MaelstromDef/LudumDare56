@@ -75,6 +75,15 @@ public class Hive : MonoBehaviour, IDestination {
 
     #endregion
 
+    #region Hive
+
+    public BeeSpawner GetBeeSpawner()
+    {
+        return beeSpawner;
+    }
+
+    #endregion
+
     #region Nectar
 
     public int GetNectar() {
@@ -116,9 +125,9 @@ public class Hive : MonoBehaviour, IDestination {
 
     #region Upgrades
 
-    public BeeSpawner GetBeeSpawner()
+    public void ActivateQueenBee()
     {
-        return beeSpawner;
+        beeSpawner.ActivateQueenBee();
     }
 
     #endregion

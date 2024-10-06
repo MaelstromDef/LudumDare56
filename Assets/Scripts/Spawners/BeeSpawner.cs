@@ -94,6 +94,11 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     #region QueenBee
 
+    public bool IsQueenBeeActive()
+    {
+        return beeSpawning;
+    }
+
     public void ActivateQueenBee()
     {
         if (printMethodCalls) Debug.Log("BeeSpawner::ActivateQueenBee");
