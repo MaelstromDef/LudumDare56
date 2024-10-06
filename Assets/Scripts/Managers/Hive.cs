@@ -15,6 +15,10 @@ public class Hive : MonoBehaviour, IDestination {
     // Nectar
     int nectar = 0;
 
+    // Upgrades
+    [Header("Upgrades")]
+    [SerializeField] Shop shop;
+
     // Events
     [Header("Unity Events")]
     public UnityEvent beeSpawned;
@@ -27,14 +31,9 @@ public class Hive : MonoBehaviour, IDestination {
     #region Unity
 
     private void Start() {
-        // Initialize Bee Spawner.
-        beeSpawner = gameObject.GetComponentInChildren<BeeSpawner>();
-        beeSpawner.SetHive(this);
-
-        // Initialize Honey Generator.
-        honeyGenerator = gameObject.GetComponentInChildren<HoneyGenerator>();
-        honeyGenerator.SetHive(this);
-        honeyGenerator.SetGeneration(false);
+        BeeSpawnerInit();
+        HoneyGeneratorInit();
+        UpgradesInit();
     }
 
 
@@ -45,7 +44,34 @@ public class Hive : MonoBehaviour, IDestination {
 
     #endregion
 
-    #region Hive
+    #region Initialization
+
+    private void BeeSpawnerInit()
+    {
+        beeSpawner = gameObject.GetComponentInChildren<BeeSpawner>();
+        beeSpawner.SetHive(this);
+    }
+
+    private void HoneyGeneratorInit()
+    {
+        honeyGenerator = gameObject.GetComponentInChildren<HoneyGenerator>();
+        honeyGenerator.SetHive(this);
+        honeyGenerator.SetGeneration(false);
+    }
+
+    private void UpgradesInit()
+    {
+        if (debugging) Debug.Log("Hive::UpgradesInit");
+
+        foreach(IUpgrade upgrade in shop.GetUpgrades())
+        {
+            upgrade.SetHive(this);
+        }
+    }
+
+    #endregion
+
+    #region Nectar
 
     public int GetNectar() {
         return nectar;
@@ -72,6 +98,15 @@ public class Hive : MonoBehaviour, IDestination {
 
     public void SetNectar(int nectar) {
         this.nectar = nectar;
+    }
+
+    #endregion
+
+    #region Upgrades
+
+    public BeeSpawner GetBeeSpawner()
+    {
+        return beeSpawner;
     }
 
     #endregion
