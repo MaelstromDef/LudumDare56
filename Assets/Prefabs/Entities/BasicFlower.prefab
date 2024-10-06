@@ -155,4 +155,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hiveLocation: {x: 0, y: 0}
   minDistance: 3.14
+  spriteRenderer: {fileID: 1610219616890709481}
+  spriteArray:
+  - {fileID: -1773665609610285982, guid: dbd94d28a6ed4d040b4b0940b3116aad, type: 3}
+  - {fileID: -7830422330370825159, guid: dbd94d28a6ed4d040b4b0940b3116aad, type: 3}
+  - {fileID: -1773665609610285982, guid: dbd94d28a6ed4d040b4b0940b3116aad, type: 3}
+  - {fileID: -2423743491742388782, guid: dbd94d28a6ed4d040b4b0940b3116aad, type: 3}
+  - {fileID: -195881633247666254, guid: dbd94d28a6ed4d040b4b0940b3116aad, type: 3}
   debugging: 0
