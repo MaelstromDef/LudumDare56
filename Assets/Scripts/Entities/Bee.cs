@@ -11,6 +11,7 @@ public class Bee : MonoBehaviour, IEntity
 
     // Values
     [Header("Bee Parameters")]
+    Vector2 moveDir = Vector2.zero;
     [SerializeField] float speed = 1.0f;
     [SerializeField] int flowersToVisit = 1;
     bool move = true;
@@ -130,6 +131,7 @@ public class Bee : MonoBehaviour, IEntity
     {
         if (destination == null) return;
 
+        // Find move distance
         float moveDistance = speed * Time.deltaTime;
         float actualDistance = (destination.GetPosition() - this.GetPosition()).magnitude;
         if (moveDistance > actualDistance)
@@ -139,7 +141,9 @@ public class Bee : MonoBehaviour, IEntity
             Invoke(nameof(DestinationReached), destinationPauseTime);
         }
 
-        transform.position += transform.right * moveDistance;
+        // Move transform
+        Vector3 movement = new Vector3(moveDir.x, moveDir.y, 0) * moveDistance;
+        transform.position += movement;
     }
 
     public IDestination GetDestination()
@@ -149,21 +153,26 @@ public class Bee : MonoBehaviour, IEntity
 
     public void SetDestination(IDestination destination)
     {
+        // Get movement direction vector
         this.destination = destination;
-        transform.right = destination.GetPosition() - this.GetPosition();   // Possibly have to force z to be 0, if buggy look into. Also might need a dif direction.
-        dir = MovementDirection(destination);
+        moveDir = (destination.GetPosition() - this.GetPosition()).normalized;   // Possibly have to force z to be 0, if buggy look into. Also might need a dif direction.
+
+        // Set sprite.
+        dir = MovementDirection();
         int currentDir = Math.Sign(gameObject.transform.localScale.y);
         if (dir != currentDir) gameObject.transform.localScale.Set(transform.localScale.x * 1, transform.localScale.y * -1, transform.localScale.z); ;
-
     }
 
-    public int MovementDirection(IDestination destination) 
+    /// <summary>
+    /// Retrieves the direction the bee will have to move in to reach its destination.
+    /// </summary>
+    /// <param name="destination">-1 if left, 1 if right.</param>
+    /// <returns></returns>
+    public int MovementDirection() 
     {
-        this.destination = destination;
-        if (destination.GetPosition().x - this.GetPosition().x < 0) {
+        if (moveDir.x < 0) {
             return -1;
         } else return 1;
-
     }
 
     #endregion
