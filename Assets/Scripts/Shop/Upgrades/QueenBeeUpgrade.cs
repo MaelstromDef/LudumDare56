@@ -35,6 +35,13 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
     public void Upgrade()
     {
         if (debugging) Debug.Log("QueenBeeUpgrade::Upgrade\nHive:\t" + hive.name);
+        if(hive.GetHoney() < GetCost())
+        {
+            Debug.LogError("Tried to buy queen bee upgrade without enough honey.");
+            return;
+        }
+
+        hive.ClaimHoney(GetCost());
         hive.GetBeeSpawner().ActivateQueenBee();
     }
 
