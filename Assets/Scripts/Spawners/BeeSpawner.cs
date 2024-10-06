@@ -9,9 +9,18 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     Hive hive;
 
     // Bees
+    [Header("Bees")]
     [SerializeField] int maxBees = 1;
     private List<IEntity> bees = new List<IEntity>();
+
     [SerializeField] GameObject beePrefab;
+
+    // Queen Bee
+    [Header("Queen Bee")]
+    [SerializeField] float beeSpawnTime = 1;
+    [SerializeField] int beeSpawnQuantity = 1;
+    [SerializeField] bool beeSpawning = false;
+    float queenBeeStopwatch = 0;
 
     // Debugging
     [Header("Debugging")]
@@ -23,6 +32,19 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     private void Start()
     {
         if(spawnBeeOnStart) Invoke(nameof(Spawn), 1f);
+    }
+
+    private void Update()
+    {
+        if (beeSpawning)
+        {
+            queenBeeStopwatch += Time.deltaTime;
+            if (queenBeeStopwatch >= beeSpawnTime)
+            {
+                queenBeeStopwatch -= beeSpawnTime;
+                Spawn(beeSpawnQuantity);
+            }
+        }
     }
 
     private void OnDestroy()
@@ -66,6 +88,40 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     public Hive GetHive()
     {
         return hive;
+    }
+
+    #endregion
+
+    #region QueenBee
+
+    public void ActivateQueenBee()
+    {
+        beeSpawning = true;
+    }
+
+    public void DeactivateQueenBee()
+    {
+        beeSpawning = false;
+    }
+
+    public float GetSpawnTime()
+    {
+        return beeSpawnTime;
+    }
+
+    public void SetSpawnTime(float time)
+    {
+        beeSpawnTime = time;
+    }
+
+    public int GetBeeSpawnQuantity()
+    {
+        return beeSpawnQuantity;
+    }
+
+    public void SetBeeSpawnQuantity(int quantity)
+    {
+        beeSpawnQuantity = quantity;
     }
 
     #endregion
