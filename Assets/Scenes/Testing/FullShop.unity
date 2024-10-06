@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &149902434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8626106219809439791, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-  m_PrefabInstance: {fileID: 3100852992445416008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e38d98514c3304989130a4af272b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &200502437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,11 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0db6c52d67d824346b9fd758a1fdd08c, type: 3}
---- !u!1 &360401701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7877736453216286673, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-  m_PrefabInstance: {fileID: 3100852992445416008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &925998897
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +312,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1434ffaef0ad448ae12571b8669b18, type: 3}
+--- !u!1001 &1892157537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1005524232418749603, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.1487484
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.022766434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.027277585
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895303687502520990, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Name
+      value: HiveAndShop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2086288448}
+    - target: {fileID: 9063133185075266663, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.1000004
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
 --- !u!1 &2086288446
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,14 +671,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiveAndShop
       objectReference: {fileID: 0}
-    - target: {fileID: 5343258895940872529, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: queenSprite
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 360401701}
-    - target: {fileID: 5343258895940872529, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: hiveAnimator
-      value: 
-      objectReference: {fileID: 149902434}
+      objectReference: {fileID: 2086288448}
+    - target: {fileID: 9063133185075266663, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.1000004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -641,3 +694,4 @@ SceneRoots:
   - {fileID: 1422366107}
   - {fileID: 3100852992445416008}
   - {fileID: 1996507274009288588}
+  - {fileID: 1892157537}

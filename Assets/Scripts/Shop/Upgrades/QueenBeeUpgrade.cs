@@ -39,14 +39,14 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
     public void Upgrade()
     {
         if (debugging) Debug.Log("QueenBeeUpgrade::Upgrade\nHive:\t" + hive.name);
-        if(hive.GetHoney() < GetCost())
+        if(CurrencyManager.instance.GetHoney() < GetCost())
         {
             GameObject popup = Instantiate(popupPrefab);
             popup.GetComponent<PopUp>().Open(GetName(), "You don't have enough honey!");
             return;
         }
 
-        hive.ClaimHoney(GetCost());
+        CurrencyManager.instance.ClaimHoney(GetCost());
         hive.GetBeeSpawner().ActivateQueenBee();
     }
 

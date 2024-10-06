@@ -58,5 +58,13 @@ public class CurrencyManager : MonoBehaviour
         txtHoney.text = honeyPreamble + honey;
     }
 
+    public void ClaimHoney(int amount)
+    {
+        if(amount > honey) amount = honey;
+
+        honey -= amount;
+        UpdateHoneyText();
+    }
+
     #endregion
 }
