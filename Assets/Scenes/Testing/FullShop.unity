@@ -119,6 +119,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &113650559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113650560}
+  m_Layer: 0
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113650560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113650559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 323787565}
+  m_Father: {fileID: 1738689412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &200502437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,6 +216,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1982182605036784235, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982182605036784235, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: upgradeObjs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982182605036784235, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: 'upgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 323787564}
+    - target: {fileID: 1982182605036784235, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: 'upgradeObjs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 323787564}
     - target: {fileID: 5631821297739305408, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
       propertyPath: m_Name
       value: Shop
@@ -230,9 +278,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5429707912303634267, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 113650560}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+--- !u!1 &323787564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323787565}
+  - component: {fileID: 323787566}
+  m_Layer: 0
+  m_Name: QueenBee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323787565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323787564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 113650560}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323787566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323787564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd28bba6a98a0fc42baebccb3349c66c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeName: Queen Bee
+  upgradeDesc: Automatically sends out workers from a hive at a rate of 1/s (increased
+    at higher levels)
+  upgradeCost: 10
+  debugging: 1
 --- !u!1001 &878008535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +385,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hive
       objectReference: {fileID: 0}
+    - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 1738689413}
+    - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: 'upgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 323787564}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -426,6 +538,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1434ffaef0ad448ae12571b8669b18, type: 3}
+--- !u!4 &1738689412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5429707912303634267, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+  m_PrefabInstance: {fileID: 313339692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1738689413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1982182605036784235, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+  m_PrefabInstance: {fileID: 313339692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a11118119c19a34494cbef925bf49c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2086288446
 GameObject:
   m_ObjectHideFlags: 0

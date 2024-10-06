@@ -17,7 +17,7 @@ public class Hive : MonoBehaviour, IDestination {
 
     // Upgrades
     [Header("Upgrades")]
-    [SerializeField] List<IUpgrade> upgrades = new List<IUpgrade>();
+    [SerializeField] Shop shop;
 
     // Events
     [Header("Unity Events")]
@@ -61,7 +61,9 @@ public class Hive : MonoBehaviour, IDestination {
 
     private void UpgradesInit()
     {
-        foreach(IUpgrade upgrade in upgrades)
+        if (debugging) Debug.Log("Hive::UpgradesInit");
+
+        foreach(IUpgrade upgrade in shop.GetUpgrades())
         {
             upgrade.SetHive(this);
         }

@@ -96,6 +96,8 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     public void ActivateQueenBee()
     {
+        if (printMethodCalls) Debug.Log("BeeSpawner::ActivateQueenBee");
+
         beeSpawning = true;
     }
 
