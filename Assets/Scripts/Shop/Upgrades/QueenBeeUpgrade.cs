@@ -8,6 +8,10 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
     [SerializeField] string upgradeDesc = "Automatically sends out workers from a hive at a rate of 1/s (increased at higher levels)";
     [SerializeField] int upgradeCost = 10;
 
+    // UI Feedback
+    [Header("UI")]
+    [SerializeField] GameObject popupPrefab;
+
     // Hive
     Hive hive;
 
@@ -37,7 +41,8 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
         if (debugging) Debug.Log("QueenBeeUpgrade::Upgrade\nHive:\t" + hive.name);
         if(hive.GetHoney() < GetCost())
         {
-            Debug.LogError("Tried to buy queen bee upgrade without enough honey.");
+            GameObject popup = Instantiate(popupPrefab);
+            popup.GetComponent<PopUp>().Open(GetName(), "You don't have enough honey!");
             return;
         }
 
