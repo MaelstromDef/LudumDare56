@@ -80,6 +80,16 @@ public class Hive : MonoBehaviour, IDestination {
 
     #endregion
 
+    #region Honey
+
+    public HoneyGenerator GetHoneyGenerator() { return honeyGenerator; }
+
+    public int GetHoney() { return honeyGenerator.GetYield(); }
+
+    public void ClaimHoney(int amount) { honeyGenerator.ClaimYield(amount); }
+
+    #endregion
+
     #region Nectar
 
     public int GetNectar() {
@@ -101,6 +111,8 @@ public class Hive : MonoBehaviour, IDestination {
 
     public void AddNectar(int amount) {
         nectar += amount;
+
+        honeyGenerator.SetGeneration(nectar >= honeyGenerator.GetRequiredNectar()); // Check if honey generator should generate honey.
 
         if (debugging) Debug.Log("Hive::AddNectar\nNectar:\t" + nectar);
     }

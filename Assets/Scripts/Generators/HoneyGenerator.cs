@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HoneyGenerator : MonoBehaviour, IGenerator
 {
+    public UnityEvent<int> honeyGenerated;
+
     // Generation
     [Header("Generation Parameters")]
     [SerializeField] float honeyGenerationTime = 1.0f;
@@ -34,6 +37,11 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
     #endregion
 
     #region HoneyGenerator
+
+    public int GetRequiredNectar()
+    {
+        return requiredNectar;
+    }
 
     public Hive GetHive()
     {
@@ -86,6 +94,8 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
         hive.ClaimNectar(requiredNectar);
         stopwatch -= honeyGenerationTime;
         honey += honeyGenerationYield;
+
+        honeyGenerated.Invoke(honey);
 
         // Check if generation should continue.
         if (hive.GetNectar() < requiredNectar) SetGeneration(false);
