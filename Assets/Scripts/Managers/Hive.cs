@@ -15,6 +15,11 @@ public class Hive : MonoBehaviour, IDestination {
     // Nectar
     int nectar = 0;
 
+    //Sprite Management
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
+    public GameObject queenSprite;
+
     // Upgrades
     [Header("Upgrades")]
     [SerializeField] Shop shop;
@@ -34,6 +39,8 @@ public class Hive : MonoBehaviour, IDestination {
         BeeSpawnerInit();
         HoneyGeneratorInit();
         UpgradesInit();
+
+        queenSprite = GameObject.Find("hive/graphic/Queen Bee");
     }
 
 
@@ -121,6 +128,14 @@ public class Hive : MonoBehaviour, IDestination {
         this.nectar = nectar;
     }
 
+    public void SetSprite(bool isGenerating) 
+    {
+
+        if (!isGenerating) spriteRenderer.sprite = spriteArray[0];
+        else spriteRenderer.sprite = spriteArray[1];
+
+    }
+
     #endregion
 
     #region Upgrades
@@ -128,6 +143,7 @@ public class Hive : MonoBehaviour, IDestination {
     public void ActivateQueenBee()
     {
         beeSpawner.ActivateQueenBee();
+        queenSprite.SetActive(true);
     }
 
     #endregion
