@@ -40,6 +40,7 @@ public class Hive : MonoBehaviour, IDestination {
         BeeSpawnerInit();
         HoneyGeneratorInit();
         UpgradesInit();
+        CurrencyManagerInit();
 
         queenSprite = GameObject.Find("hive/graphic/Queen Bee");
     }
@@ -75,6 +76,12 @@ public class Hive : MonoBehaviour, IDestination {
         {
             upgrade.SetHive(this);
         }
+    }
+
+    private void CurrencyManagerInit()
+    {
+        honeyGenerator.honeyGenerated.AddListener(CurrencyManager.instance.AddHoney);   // Add yield to global
+        honeyGenerator.honeyGenerated.AddListener(ClaimHoney);                          // Claim the yield
     }
 
     #endregion
