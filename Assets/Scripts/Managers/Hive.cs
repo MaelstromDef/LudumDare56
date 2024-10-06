@@ -18,6 +18,7 @@ public class Hive : MonoBehaviour, IDestination {
     //Sprite Management
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
+    public GameObject queenSprite;
 
     // Upgrades
     [Header("Upgrades")]
@@ -38,6 +39,8 @@ public class Hive : MonoBehaviour, IDestination {
         BeeSpawnerInit();
         HoneyGeneratorInit();
         UpgradesInit();
+
+        queenSprite = GameObject.Find("hive/graphic/Queen Bee");
     }
 
 
@@ -140,6 +143,7 @@ public class Hive : MonoBehaviour, IDestination {
     public void ActivateQueenBee()
     {
         beeSpawner.ActivateQueenBee();
+        queenSprite.SetActive(true);
     }
 
     #endregion

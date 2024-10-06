@@ -607,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiveAndShop
       objectReference: {fileID: 0}
+    - target: {fileID: 6131680324374903982, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
