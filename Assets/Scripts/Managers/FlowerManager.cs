@@ -14,8 +14,8 @@ public class FlowerManager : MonoBehaviour, ISpawner
     [SerializeField] int maxFlowers = 1;
     [SerializeField] GameObject flowerPrefab;
 
-    Queue<IEntity> unclaimedFlowers = new Queue<IEntity>();
-    HashSet<IEntity> claimedFlowers = new HashSet<IEntity>();    
+    Queue<IEntity> unclaimedFlowers = new Queue<IEntity>();     // Flower set that a bee is not already going to
+    HashSet<IEntity> claimedFlowers = new HashSet<IEntity>();   // Flower set that a bee is already going to 
 
     // Values
     [SerializeField] float respawnDelay = 1f;
