@@ -7,8 +7,12 @@ public class CurrencyManager : MonoBehaviour
     public static CurrencyManager instance;
 
     // UI components
+    [Header("Honey")]
     [SerializeField] TMP_Text txtHoney;
-    [SerializeField] TMP_Text txtNectar;
+    [SerializeField] string honeyPreamble;
+
+    // Currency
+    int honey = 0;
 
     #region Unity
 
@@ -23,15 +27,36 @@ public class CurrencyManager : MonoBehaviour
         instance = this;
     }
 
+
+    private void Start()
+    {
+        UpdateHoneyText();
+    }
+
     #endregion
 
     #region Honey
 
+    public int GetHoney()
+    {
+        return honey;
+    }
 
+    public void SetHoney(int honey)
+    {
+        this.honey = honey;
+    }
 
-    #endregion
+    public void AddHoney(int amount)
+    {
+        honey += amount;
+        UpdateHoneyText();
+    }
 
-    #region Nectar
+    public void UpdateHoneyText()
+    {
+        txtHoney.text = honeyPreamble + honey;
+    }
 
     #endregion
 }
