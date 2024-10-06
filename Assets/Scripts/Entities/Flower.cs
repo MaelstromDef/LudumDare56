@@ -74,7 +74,7 @@ public class Flower : MonoBehaviour, IEntity, IDestination
         Vector2 dir = Random.insideUnitCircle;
 
         // Shoot ray
-        RaycastHit2D hit = Physics2D.Raycast(hiveLocation, dir, minDistance * 100, LayerMask.GetMask(new string[] { "Bounds" }));
+        RaycastHit2D hit = Physics2D.Raycast(hiveLocation, dir, Mathf.Infinity, LayerMask.GetMask(new string[] { "Bounds" }));
         float distance = hit.distance;
         if (distance < minDistance) Debug.LogError("Flower::Spawn\nDistance was less than minimum distance:\t" + distance);
 
