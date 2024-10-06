@@ -1,12 +1,7 @@
 using UnityEngine;
 
-public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
+public class QueenBeeUpgrade : UpgradeCard, IUpgrade
 {
-    [Header("Upgrade Values")]
-    [SerializeField] string upgradeName = "Queen Bee";
-    [SerializeField] string upgradeDesc = "Automatically sends out workers from a hive at a rate of 1/s (increased at higher levels)";
-    [SerializeField] int upgradeCost = 10;
-
     // Hive
     Hive hive;
 
