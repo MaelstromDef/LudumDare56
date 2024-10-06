@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBees: 20
   beePrefab: {fileID: 383601517138216831, guid: 512adf244f1fde247ab28119365ece1d, type: 3}
+  beeSpawnTime: 1
+  beeSpawnQuantity: 1
+  beeSpawning: 0
   printMethodCalls: 1
   spawnBeeOnStart: 0
 --- !u!1 &6407739242598460994
@@ -96,6 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204150d1a19b9cd4e9948d3deb244f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6578888274850590538}
+  spriteArray:
+  - {fileID: 8585164790221992103, guid: e47fb3171d7e6974bb961bb32cc6ffbf, type: 3}
+  - {fileID: -5717541516847199654, guid: e47fb3171d7e6974bb961bb32cc6ffbf, type: 3}
+  shop: {fileID: 0}
   beeSpawned:
     m_PersistentCalls:
       m_Calls: []

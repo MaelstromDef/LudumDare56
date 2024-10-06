@@ -91,6 +91,8 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
         if (hive.GetNectar() < requiredNectar) SetGeneration(false);
 
         if (debugging) Debug.Log("HoneyGenerator::Generate\nHoney:\t" + honey);
+
+        hive.SetSprite(GetGeneration());
     }
 
     public float GetGenerationTime()
@@ -98,6 +100,10 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
         return honeyGenerationTime;
     }
 
+    public bool GetGeneration() 
+    {
+        return generate;
+    }
     public void SetGenerationTime(float generationTime)
     {
         honeyGenerationTime = generationTime;

@@ -15,6 +15,10 @@ public class Hive : MonoBehaviour, IDestination {
     // Nectar
     int nectar = 0;
 
+    //Sprite Management
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
+
     // Upgrades
     [Header("Upgrades")]
     [SerializeField] Shop shop;
@@ -98,6 +102,14 @@ public class Hive : MonoBehaviour, IDestination {
 
     public void SetNectar(int nectar) {
         this.nectar = nectar;
+    }
+
+    public void SetSprite(bool isGenerating) 
+    {
+
+        if (!isGenerating) spriteRenderer.sprite = spriteArray[0];
+        else spriteRenderer.sprite = spriteArray[1];
+
     }
 
     #endregion
