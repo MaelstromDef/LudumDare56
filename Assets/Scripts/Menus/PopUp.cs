@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PopUp : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class PopUp : MonoBehaviour
     }
 
     public void Close()
+    {
+        GameObject myEventSystem = GameObject.Find("EventSystem");
+        myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+        gameObject.SetActive(false);
+
+        Invoke(nameof(DestroySelf), 1f);
+    }
+
+    private void DestroySelf()
     {
         Destroy(gameObject);
     }
