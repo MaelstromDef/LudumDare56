@@ -86,8 +86,18 @@ public class ShopMenu : MonoBehaviour, IMenu
         // Replace with actual upgrades
         for (int i = 0; i < pageSlots.Count; i++)
         {
-            if (currentPage * pageSlots.Count + i >= upgrades.Count) return;
-            Instantiate(upgrades[currentPage * pageSlots.Count + i], pageSlots[i].transform);
+            // Instantiate upgrade
+            int upgradeIndex = currentPage * pageSlots.Count + i;
+            if (upgradeIndex >= upgrades.Count) return;
+            GameObject upgradeObj = Instantiate(upgrades[upgradeIndex], pageSlots[i].transform);
+
+            // Bind btnBuy to action.
+            UpgradeCard card = upgradeObj.GetComponent<UpgradeCard>();
+
+            GameObject btnBuy = card.GetBtnBuy();
+            string action = card.GetAction();
+
+            btnBuy.GetComponent<Button>().onClick.AddListener(() => PerformAction(action));
         }
     }
 
