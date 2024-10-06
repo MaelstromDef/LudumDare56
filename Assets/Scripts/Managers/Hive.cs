@@ -19,6 +19,7 @@ public class Hive : MonoBehaviour, IDestination {
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     public GameObject queenSprite;
+    [SerializeField] HiveAnimator hiveAnimator;
 
     // Upgrades
     [Header("Upgrades")]
@@ -95,6 +96,18 @@ public class Hive : MonoBehaviour, IDestination {
 
     public void ClaimHoney(int amount) { honeyGenerator.ClaimYield(amount); }
 
+    public void SetSprite(bool isGenerating) {
+
+        if (!isGenerating) {
+            spriteRenderer.sprite = spriteArray[0];
+            hiveAnimator.ActivateGeneratonIdle(false);
+        } else {
+            spriteRenderer.sprite = spriteArray[1];
+            hiveAnimator.ActivateGeneratonIdle(true);
+        }
+
+    }
+
     #endregion
 
     #region Nectar
@@ -128,13 +141,7 @@ public class Hive : MonoBehaviour, IDestination {
         this.nectar = nectar;
     }
 
-    public void SetSprite(bool isGenerating) 
-    {
 
-        if (!isGenerating) spriteRenderer.sprite = spriteArray[0];
-        else spriteRenderer.sprite = spriteArray[1];
-
-    }
 
     #endregion
 
