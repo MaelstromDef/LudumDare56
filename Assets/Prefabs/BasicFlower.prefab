@@ -49,6 +49,8 @@ MonoBehaviour:
       m_Calls: []
   nectarGenerationTime: 1
   nectarGenerationYield: 1
+  maxNectar: 10
+  capNectar: 0
   debugging: 0
 --- !u!1 &4022778515862365817
 GameObject:
@@ -151,3 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5843b9aa453e44ad41eb0bd4cf0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hiveLocation: {x: 0, y: 0}
+  minDistance: 3.14
+  debugging: 0

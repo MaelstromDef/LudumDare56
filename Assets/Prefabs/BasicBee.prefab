@@ -189,5 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  flowersToVisit: 2
   destinationPauseTime: 1
-  debugging: 1
+  debugging: 0

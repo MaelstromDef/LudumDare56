@@ -12,10 +12,15 @@ public class Bee : MonoBehaviour, IEntity
     // Values
     [Header("Bee Parameters")]
     [SerializeField] float speed = 1.0f;
+    [SerializeField] int flowersToVisit = 1;
     bool move = true;
 
     [SerializeField] float destinationPauseTime = 1.0f;
 
+    // Flowers
+    int collectedNectar = 0;
+
+    // Debugging
     [Header("Debugging")]
     [SerializeField] bool debugging = false;
 
@@ -35,13 +40,16 @@ public class Bee : MonoBehaviour, IEntity
     // Claims a flower from global flower pool
     void FindFlower()
     {
-        SetDestination(FlowerManager.instance.ClaimFlower());
+        Flower flower = FlowerManager.instance.ClaimFlower();
+        if (flower == null) Kill();
+        else SetDestination(flower);
     }
 
     // Releases claim to flower from global flower pool
     void ReleaseFlower()
     {
         if (!(destination is Flower)) return;
+        collectedNectar += ((Flower)destination).CollectNectar();
         FlowerManager.instance.ReleaseFlower((Flower)destination);
     }
 
@@ -50,21 +58,23 @@ public class Bee : MonoBehaviour, IEntity
         SetDestination(destination = ((BeeSpawner)spawner).GetHive());
     }
 
-    void FindNextDestination()
+    void DestinationReached()
     {
-        if (debugging) Debug.Log("Bee::FindNextDestination");
+        if (debugging) Debug.Log("Bee::DestinationReached");
 
-        // Find hive
-        if(destination is Hive)
+        if(destination is Flower)
         {
             ReleaseFlower();
-            Kill();
-        }
-        // Kill self
-        else if(destination is Flower)
-        {
-            FindHive();
+            flowersToVisit--;
+
+            if(flowersToVisit > 0) FindFlower();
+            else FindHive();
+
             move = true;
+        }else if(destination is Hive)
+        {
+            ((BeeSpawner)spawner).GetHive().AddNectar(collectedNectar);
+            Kill();
         }
     }
 
@@ -99,9 +109,12 @@ public class Bee : MonoBehaviour, IEntity
 
     public void Kill()
     {
-        ReleaseFlower();
+        if (debugging) Debug.Log("Bee:Kill");
 
-        gameObject.SetActive(false);
+        ReleaseFlower();
+        spawner.Remove(this);
+
+        Destroy(gameObject);
     }
 
     #endregion
@@ -115,13 +128,15 @@ public class Bee : MonoBehaviour, IEntity
 
     public void Move()
     {
+        if (destination == null) return;
+
         float moveDistance = speed * Time.deltaTime;
         float actualDistance = (destination.GetPosition() - this.GetPosition()).magnitude;
         if (moveDistance > actualDistance)
         {
             move = false;
             moveDistance = actualDistance;
-            Invoke(nameof(FindNextDestination), destinationPauseTime);
+            Invoke(nameof(DestinationReached), destinationPauseTime);
         }
 
         transform.position += transform.right * moveDistance;

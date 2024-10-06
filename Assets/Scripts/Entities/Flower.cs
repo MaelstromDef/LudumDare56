@@ -7,6 +7,11 @@ public class Flower : MonoBehaviour, IEntity, IDestination
 
     // Spawner
     ISpawner spawner;
+    [SerializeField] Vector2 hiveLocation;
+    [SerializeField] float minDistance;
+
+    // Debugging
+    [SerializeField] bool debugging = false;
 
 
     #region Unity
@@ -25,9 +30,9 @@ public class Flower : MonoBehaviour, IEntity, IDestination
         return new Vector2(transform.position.x, transform.position.y);
     }
 
-    public float CollectNectar()
+    public int CollectNectar()
     {
-        throw new System.NotImplementedException();
+        return nectarGenerator.ClaimFullYield();
     }
 
     #endregion
@@ -65,6 +70,23 @@ public class Flower : MonoBehaviour, IEntity, IDestination
 
     public void Spawn()
     {
+        // Get ray direction
+        Vector2 dir = Random.insideUnitCircle;
+
+        // Shoot ray
+        RaycastHit2D hit = Physics2D.Raycast(hiveLocation, dir, minDistance * 100, LayerMask.GetMask(new string[] { "Bounds" }));
+        float distance = hit.distance;
+        if (distance < minDistance) Debug.LogError("Flower::Spawn\nDistance was less than minimum distance:\t" + distance);
+
+        // Get random distance and place
+        Ray2D ray = new Ray2D(hiveLocation, dir);
+        float randDist = Random.Range(minDistance, distance);
+        Vector2 point = ray.GetPoint(randDist);
+
+        transform.position = point;
+
+        if (debugging) Debug.Log("Flower::Spawn\nPosition:\t" + transform.position + "\nPoint:\t" + point);
+
         gameObject.SetActive(true);
     }
 

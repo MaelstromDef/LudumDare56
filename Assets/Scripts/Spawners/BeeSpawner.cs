@@ -10,8 +10,7 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     // Bees
     [SerializeField] int maxBees = 1;
-    int numBees = 0;
-    private List<Bee> bees = new List<Bee>();
+    private List<IEntity> bees = new List<IEntity>();
     [SerializeField] GameObject beePrefab;
 
     // Debugging
@@ -23,43 +22,17 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     private void Start()
     {
-        // Initialize bees
-        for (int i = 0; i < maxBees; i++) AddBee();
-
         if(spawnBeeOnStart) Invoke(nameof(Spawn), 1f);
     }
 
     private void OnDestroy()
     {
-        for (int i = 0; i < maxBees; i++) RemoveBee();
+        KillAll();
     }
 
     #endregion
 
     #region BeeSpawner
-
-    /// <summary>
-    /// Adds a bee to the list.
-    /// </summary>
-    private void AddBee()
-    {
-        if (printMethodCalls) Console.WriteLine("Hive::AddBee");
-
-        GameObject beeObj = Instantiate(beePrefab, transform);
-        Bee newBee = beeObj.GetComponent<Bee>();
-        newBee.SetSpawner(this);
-        newBee.Deactivate();
-        bees.Add(newBee);
-    }
-
-    /// <summary>
-    /// Removes a bee from the list.
-    /// </summary>
-    private void RemoveBee()
-    {
-        if (bees[bees.Count - 1] != null && bees[bees.Count - 1].isActiveAndEnabled) bees[bees.Count - 1].Kill();
-        bees.RemoveAt(bees.Count - 1);
-    }
 
     /// <summary>
     /// Sets the max number of bees and loads in inactive bees.
@@ -70,21 +43,7 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     {
         if (printMethodCalls) Debug.Log("Hive::SetMaxBees");
 
-        if (count < 0) count = 0;       // Input correction.
-        if (count == maxBees) return;    // Do nothing scenario
-
-        // Count less than max bees
-        if (count < maxBees)
-        {
-            for (int i = maxBees; i > count; i--) RemoveBee();
-        }
-        // Count more than max bees
-        else if (count > maxBees)
-        {
-            for (int i = maxBees; i < count; i++) AddBee();
-        }
-
-        if (bees.Count != count) throw new Exception("Max bees did not end up matching set value.\nDesired value: " + count + "\nActual value: " + bees.Count);
+        if (count < 0) count = 0;       // Input validation.
         maxBees = count;
     }
 
@@ -120,9 +79,14 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     {
         if (printMethodCalls) Debug.Log("Hive::Spawn");
 
-        if (numBees < maxBees)
+        if (bees.Count < maxBees)
         {
-            bees[numBees++].Spawn();
+            GameObject beeObj = Instantiate(beePrefab, transform);
+            Bee bee = beeObj.GetComponent<Bee>();
+            bee.SetSpawner(this);
+            bees.Add(bee);
+
+            bee.Spawn();
         }
     }
 
@@ -138,6 +102,11 @@ public class BeeSpawner : MonoBehaviour, ISpawner
             Spawn();
     }
 
+    public void Remove(IEntity entity)
+    {
+        bees.Remove(entity);
+    }
+
     /// <summary>
     /// Kills a single bee.
     /// </summary>
@@ -145,14 +114,9 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     {
         if (printMethodCalls) Debug.Log("Hive::Kill");
 
-        if (numBees == 0) return;
+        if (bees.Count == 0) return;
 
-        if (numBees == maxBees)
-        {
-            bees[bees.Count - 1].Kill();
-            numBees--;
-        }
-        else bees[numBees--].Kill();
+        bees[bees.Count - 1].Kill();
     }
 
     /// <summary>
@@ -173,7 +137,7 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     {
         if (printMethodCalls) Debug.Log("Hive::KillAll");
 
-        Kill(numBees);
+        Kill(bees.Count);
     }
 
     /// <summary>
