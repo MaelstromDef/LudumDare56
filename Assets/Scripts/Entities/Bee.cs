@@ -159,8 +159,12 @@ public class Bee : MonoBehaviour, IEntity
 
         // Set sprite.
         dir = MovementDirection();
-        int currentDir = Math.Sign(gameObject.transform.localScale.y);
-        if (dir != currentDir) gameObject.transform.localScale.Set(transform.localScale.x * 1, transform.localScale.y * -1, transform.localScale.z); ;
+        int currentDir = Math.Sign(gameObject.transform.localScale.x);
+        if (dir != currentDir)
+        {
+            if (debugging) Debug.Log("Bee::SetDestination\nCurrent direction is incorrect. Swapping now.");
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     /// <summary>

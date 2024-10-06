@@ -10,6 +10,10 @@ public class Flower : MonoBehaviour, IEntity, IDestination
     [SerializeField] Vector2 hiveLocation;
     [SerializeField] float minDistance;
 
+    //Graphics and animation
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
+
     // Debugging
     [SerializeField] bool debugging = false;
 
@@ -82,6 +86,8 @@ public class Flower : MonoBehaviour, IEntity, IDestination
         Ray2D ray = new Ray2D(hiveLocation, dir);
         float randDist = Random.Range(minDistance, distance);
         Vector2 point = ray.GetPoint(randDist);
+
+        spriteRenderer.sprite = spriteArray[Random.Range(0, spriteArray.Length)];
 
         transform.position = point;
 

@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: dbd94d28a6ed4d040b4b0940b3116aad
+guid: 0d946b4fdbf6f1d4297df9731220a67e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1773665609610285982
-    second: FlowersSpritesheet_0
+      213: 6134751039864755284
+    second: RedButton_0
   - first:
-      213: -7830422330370825159
-    second: FlowersSpritesheet_1
-  - first:
-      213: -2423743491742388782
-    second: FlowersSpritesheet_2
-  - first:
-      213: -5917793226842723088
-    second: FlowersSpritesheet_3
-  - first:
-      213: -195881633247666254
-    second: FlowersSpritesheet_4
+      213: -6296917576086021652
+    second: RedButton_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,111 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlowersSpritesheet_0
+      name: RedButton_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 1307
-        width: 571
-        height: 1354
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+        x: 128
+        y: 588
+        width: 1352
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26c2adc768ca267e0800000000000000
-      internalID: -1773665609610285982
+      spriteID: 454d8944193032550800000000000000
+      internalID: 6134751039864755284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlowersSpritesheet_1
+      name: RedButton_1
       rect:
         serializedVersion: 2
-        x: 660
-        y: 1343
-        width: 440
-        height: 1291
-      alignment: 9
-      pivot: {x: 0.5, y: 0.8}
+        x: 1542
+        y: 603
+        width: 1352
+        height: 703
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 934e5fcb060c45390800000000000000
-      internalID: -7830422330370825159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlowersSpritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 1195
-        y: 1103
-        width: 805
-        height: 1585
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2dda704c2222d5ed0800000000000000
-      internalID: -2423743491742388782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlowersSpritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 2045
-        y: 1255
-        width: 845
-        height: 1404
-      alignment: 9
-      pivot: {x: 0.5, y: 0.65}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fca3dbf966cfdda0800000000000000
-      internalID: -5917793226842723088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlowersSpritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 33
-        width: 968
-        height: 1161
-      alignment: 9
-      pivot: {x: 0.75, y: 0.8}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bfdf3041b6184df0800000000000000
-      internalID: -195881633247666254
+      spriteID: ce99a79b3dadc98a0800000000000000
+      internalID: -6296917576086021652
       vertices: []
       indices: 
       edges: []
@@ -251,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6c79558acad59494095f2cc3d13ae3b9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -261,11 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FlowersSpritesheet_0: -1773665609610285982
-      FlowersSpritesheet_1: -7830422330370825159
-      FlowersSpritesheet_2: -2423743491742388782
-      FlowersSpritesheet_3: -5917793226842723088
-      FlowersSpritesheet_4: -195881633247666254
+      RedButton_0: 6134751039864755284
+      RedButton_1: -6296917576086021652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

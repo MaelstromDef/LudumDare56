@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Animations.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 222780612250917566, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
+      propertyPath: debugging
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1889929801711277146, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
       propertyPath: m_Name
       value: Bee Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966190681028342095, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7084698048049540076, guid: ce585c32343d4d2408874f4f936487b7, type: 3}
       propertyPath: m_LocalScale.x

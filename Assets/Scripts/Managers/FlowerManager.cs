@@ -21,6 +21,7 @@ public class FlowerManager : MonoBehaviour, ISpawner
     [SerializeField] float respawnDelay = 1f;
     bool keepDead = false;
 
+
     // Debugging
     [SerializeField] bool debugging = false;
 
