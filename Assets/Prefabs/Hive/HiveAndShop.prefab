@@ -85,6 +85,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hive
       objectReference: {fileID: 0}
+    - target: {fileID: 6912386961939093961, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: shop
       value: 
