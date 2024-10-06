@@ -94,5 +94,11 @@ public class NectarGenerator : MonoBehaviour, IGenerator
         return nectar;
     }
 
+    public int GetMaxNectar() 
+    {
+
+        return maxNectar;
+    }
+
     #endregion
 }
