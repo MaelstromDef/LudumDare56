@@ -20,9 +20,6 @@ public class Hive : MonoBehaviour, IDestination {
     public UnityEvent beeSpawned;
     public UnityEvent beeKilled;
 
-    // Animation
-    Animator hiveAnimator;
-
     // Debugging
     [Header("Debugging")]
     [SerializeField] bool debugging = false;
@@ -38,16 +35,12 @@ public class Hive : MonoBehaviour, IDestination {
         honeyGenerator = gameObject.GetComponentInChildren<HoneyGenerator>();
         honeyGenerator.SetHive(this);
         honeyGenerator.SetGeneration(false);
-
-        //Get animator component
-        hiveAnimator = gameObject.GetComponent<Animator>();
     }
 
 
     private void OnMouseDown() {
         if (debugging) Debug.Log("Hive::OnMouseDown");
         beeSpawner.Spawn();
-        hiveAnimator.SetTrigger("isClicked");
     }
 
     #endregion
