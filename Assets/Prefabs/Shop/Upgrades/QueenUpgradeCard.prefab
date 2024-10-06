@@ -8,6 +8,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33.3275
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30.9457
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -86.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.4729004
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 59.6357
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1535086110608389732, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_text
       value: Queen Bee
@@ -100,9 +140,17 @@ PrefabInstance:
       propertyPath: action
       value: Queen Bee
       objectReference: {fileID: 0}
+    - target: {fileID: 7404062062948525552, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7189973082312568561, guid: 1a566fd97b9634b4bbc21198c814691f, type: 3}
+    - target: {fileID: 7564275931502208054, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7739719983399385581, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_Name
-      value: QueenUpgrade
+      value: QueenUpgradeCard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HiveAnimator : MonoBehaviour
 {
-    Animator hiveAnimator;
+    [SerializeField] Animator hiveAnimator;
 
     private void Start()
     {
