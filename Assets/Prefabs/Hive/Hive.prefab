@@ -103,6 +103,7 @@ MonoBehaviour:
   spriteArray:
   - {fileID: 8585164790221992103, guid: e47fb3171d7e6974bb961bb32cc6ffbf, type: 3}
   - {fileID: -5717541516847199654, guid: e47fb3171d7e6974bb961bb32cc6ffbf, type: 3}
+  queenSprite: {fileID: 0}
   shop: {fileID: 0}
   beeSpawned:
     m_PersistentCalls:
@@ -157,6 +158,134 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 18.587822, y: 16.083801}
   m_EdgeRadius: 0
+--- !u!1 &6912386961939093961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5756961463433049208}
+  - component: {fileID: 3967443309369758226}
+  - component: {fileID: 638975151754695700}
+  - component: {fileID: 1362107180564234639}
+  m_Layer: 0
+  m_Name: Queen Bee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5756961463433049208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912386961939093961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.080052406, w: 0.99679065}
+  m_LocalPosition: {x: 1.46, y: 8.33, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7974489132404051018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.183}
+--- !u!212 &3967443309369758226
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912386961939093961}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 7189973082312568561, guid: 1a566fd97b9634b4bbc21198c814691f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 17.3, y: 18.752907}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!111 &638975151754695700
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912386961939093961}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: dcbd1c316091f614080baffbdd70053a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: dcbd1c316091f614080baffbdd70053a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!95 &1362107180564234639
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912386961939093961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbbbb0ac0fa751f4ca4c6b26d306a7cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7185283479684759427
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,8 +318,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5756961463433049208}
   m_Father: {fileID: 4560662319229305531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6578888274850590538
@@ -260,6 +390,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 03488df349027574b9028a380fa83927, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 03488df349027574b9028a380fa83927, type: 2}
+  - {fileID: 7400000, guid: c4686971afe89b74eb21923d94fee17b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -364,6 +495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7b25e8458818843a82d3a52f6dd95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  honeyGenerated:
+    m_PersistentCalls:
+      m_Calls: []
   honeyGenerationTime: 1
   honeyGenerationYield: 1
   requiredNectar: 1

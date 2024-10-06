@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PopUp : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PopUp : MonoBehaviour
 
     public void Close()
     {
+        
         Destroy(gameObject);
     }
 }
