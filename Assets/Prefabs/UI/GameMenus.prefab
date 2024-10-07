@@ -947,13 +947,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_text
+      value: "Welcome to Nectar Nomads! Ready to get things buzzing? First, simply
+        click on a hive to spawn your first busy bee. These little workers will fly
+        out and bee-line straight for the flowers, collecting nectar to bring back
+        to the hive. Keep an eye on each flower\u2019s indicator to see how full
+        of nectar it is\u2014your bees will only gather what\u2019s available. \n\nOver
+        time, the nectar will transform into delicious honey right inside the hive!
+        If you're feeling like upgrading your buzzness, just click the shop icon
+        next to a hive to open the upgrade shop. Wondering what an upgrade does?
+        Hover over its icon for an explanation. \n\nNeed more hives to keep your
+        operation humming? You\u2019ll find the shop icon in the bottom left corner.
+        Now get out there and make that honey flow\u2014bee-lieve me, it\u2019ll
+        be un-bee-lievably sweet!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
     - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 8289197922812065765, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9072734070994331414, guid: 55195355ef26d764990d9e93c599c6c9, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0

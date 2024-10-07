@@ -65,7 +65,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Welcome to Nectar Nomads! Ready to get things buzzing? First, simply click
+    on a hive to spawn your first busy bee. These little workers will fly out and
+    bee-line straight for the flowers, collecting nectar to bring back to the hive.
+    Keep an eye on each flower\u2019s indicator to see how full of nectar it is\u2014your
+    bees will only gather what\u2019s available. \n\nOver time, the nectar will transform
+    into delicious honey right inside the hive! If you're feeling like upgrading
+    your buzzness, just click the shop icon next to a hive to open the upgrade shop.
+    Wondering what an upgrade does? Hover over its icon for an explanation. \n\nNeed
+    more hives to keep your operation humming? You\u2019ll find the shop icon in
+    the bottom left corner. Now get out there and make that honey flow\u2014bee-lieve
+    me, it\u2019ll be un-bee-lievably sweet!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -509,7 +519,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9029550472820554750}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0

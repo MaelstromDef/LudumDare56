@@ -536,17 +536,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Welcome to Nectar Nomads! Ready to get things buzzing? First, simply click
+    on a hive to spawn your first busy bee. These little workers will fly out and
+    bee-line straight for the flowers, collecting nectar to bring back to the hive.
+    Keep an eye on each flower\u2019s indicator to see how full of nectar it is\u2014your
+    bees will only gather what\u2019s available. \n\nOver time, the nectar will transform
+    into delicious honey right inside the hive! If you're feeling like upgrading
+    your buzzness, just click the shop icon next to a hive to open the upgrade shop.
+    Wondering what an upgrade does? Hover over its icon for an explanation. \n\nNeed
+    more hives to keep your operation humming? You\u2019ll find the shop icon in
+    the bottom left corner. Now get out there and make that honey flow\u2014bee-lieve
+    me, it\u2019ll be un-bee-lievably sweet!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
+  m_sharedMaterial: {fileID: 8289197922812065765, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -563,8 +573,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
