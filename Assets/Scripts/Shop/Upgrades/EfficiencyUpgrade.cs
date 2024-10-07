@@ -6,6 +6,7 @@ public class EfficiencyUpgrade : MonoBehaviour, IUpgrade {
     [SerializeField] string upgradeName = "Honey Efficiency";
     [SerializeField] string upgradeDesc = "Decreases the amount of nectar required to poduce honey.";
     [SerializeField] int upgradeCost = 5;
+    [SerializeField] float upgradeCostIncreaseMultiplier = 1.5f;
 
     // UI Feedback
     [Header("UI")]
@@ -41,6 +42,7 @@ public class EfficiencyUpgrade : MonoBehaviour, IUpgrade {
         }
 
         CurrencyManager.instance.ClaimHoney(GetCost());
+        upgradeCost = (int)((float)upgradeCost * upgradeCostIncreaseMultiplier);
         hive.IncreaseEfficiecy();
     }
 

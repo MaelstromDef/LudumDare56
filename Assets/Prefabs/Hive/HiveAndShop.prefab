@@ -43,7 +43,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 894575041832107444, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: requiredNectar
-      value: 2
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 894575041832107444, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: honeyGenerationTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4560662319229305531, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: m_LocalPosition.x
@@ -214,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9192751254824205328, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
       propertyPath: m_SortingOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
