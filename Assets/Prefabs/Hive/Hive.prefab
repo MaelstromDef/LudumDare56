@@ -106,6 +106,8 @@ MonoBehaviour:
   queenSprite: {fileID: 0}
   hiveAnimator: {fileID: 0}
   shop: {fileID: 0}
+  spawnTimeMultiplier: 0.75
+  spawnQuantityAdder: 0
   beeSpawned:
     m_PersistentCalls:
       m_Calls: []
@@ -297,7 +299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7974489132404051018}
   - component: {fileID: 6578888274850590538}
-  - component: {fileID: 4139497187136140282}
   - component: {fileID: 5173123397475982878}
   - component: {fileID: 4974499730487143991}
   - component: {fileID: 7768354173852978133}
@@ -379,24 +380,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &4139497187136140282
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7185283479684759427}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 03488df349027574b9028a380fa83927, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 03488df349027574b9028a380fa83927, type: 2}
-  - {fileID: 7400000, guid: c4686971afe89b74eb21923d94fee17b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!95 &5173123397475982878
 Animator:
   serializedVersion: 7
@@ -431,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e38d98514c3304989130a4af272b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hiveAnimator: {fileID: 0}
 --- !u!61 &7768354173852978133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -469,7 +453,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.24, y: 16.682585}
+    oldSize: {x: 18.64, y: 16.64258}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
