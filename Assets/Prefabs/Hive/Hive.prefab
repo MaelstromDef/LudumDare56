@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBees: 20
   beePrefab: {fileID: 383601517138216831, guid: 512adf244f1fde247ab28119365ece1d, type: 3}
+  flowersToVisit: 1
+  chanceToVisitMoreIncrease: 0.05
   beeSpawnTime: 1
   beeSpawnQuantity: 1
   beeSpawning: 0
@@ -422,7 +424,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7185283479684759427}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

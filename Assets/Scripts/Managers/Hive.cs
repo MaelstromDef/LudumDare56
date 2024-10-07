@@ -47,7 +47,7 @@ public class Hive : MonoBehaviour, IDestination {
 
 
     private void OnMouseDown() {
-        if (debugging) Debug.Log("Hive::OnMouseDown");
+        if (debugging) { Debug.Log("Hive::OnMouseDown"); }
         beeSpawner.Spawn();
     }
 
