@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HivePurchasingMenu : MonoBehaviour, IMenu
@@ -7,10 +8,12 @@ public class HivePurchasingMenu : MonoBehaviour, IMenu
     [Header("UI")]
     [SerializeField] GameObject btnOpen;
     [SerializeField] GameObject btnClose;
-
     [SerializeField] GameObject menu;
+    [SerializeField] TMP_Text txtHiveCost;
 
     [SerializeField] GameObject popupPrefab;
+
+    [SerializeField] string hiveCostPreamble = "Hive Cost: ";
 
     // Hives
     [Header("Hives")]
@@ -19,15 +22,23 @@ public class HivePurchasingMenu : MonoBehaviour, IMenu
     [SerializeField] float hiveCostMultiplier = 1.5f;
     int currentUnlocked = 0;
 
-    List<GameObject> hiveCards = new List<GameObject>();
-    [SerializeField] GameObject hiveCardPrefab;
-
     #region HivePurchasingMenu
+
+    private void UpdateHiveCostText()
+    {
+        txtHiveCost.text = hiveCostPreamble + hiveCost;
+    }
+
+    #endregion
+
+    #region IMenu
 
     public void Open()
     {
         btnOpen.SetActive(false);
         menu.SetActive(true);
+
+        UpdateHiveCostText();
     }
 
     public void Close()
@@ -63,6 +74,7 @@ public class HivePurchasingMenu : MonoBehaviour, IMenu
         CurrencyManager.instance.ClaimHoney(hiveCost);
         hives[currentUnlocked].SetActive(true);
         hiveCost = (int)((float)hiveCost * hiveCostMultiplier);
+        UpdateHiveCostText();
     }
 
     public int GetPageCount()
