@@ -72,7 +72,7 @@ public class HivePurchasingMenu : MonoBehaviour, IMenu
 
         // Purchase
         CurrencyManager.instance.ClaimHoney(hiveCost);
-        hives[currentUnlocked].SetActive(true);
+        hives[currentUnlocked++].SetActive(true);
         hiveCost = (int)((float)hiveCost * hiveCostMultiplier);
         UpdateHiveCostText();
     }
