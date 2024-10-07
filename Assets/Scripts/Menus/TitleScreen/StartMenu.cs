@@ -9,6 +9,9 @@ public class StartMenu : MonoBehaviour, IMenu
 
     [SerializeField] List<GameObject> options = new List<GameObject>();
 
+    [Header("Debugging")]
+    [SerializeField] bool debugging = false;
+
     #region IMenu
 
     /// <summary>
@@ -76,7 +79,13 @@ public class StartMenu : MonoBehaviour, IMenu
 
     public void PerformAction(string actionName)
     {
+        if (subMenus.Count != subMenuObjects.Count)
+            foreach (GameObject obj in subMenuObjects)
+                subMenus.Add(obj.GetComponent<IMenu>());
+
         int subMenu = int.Parse(actionName);
+        if(debugging) Debug.Log("StartMenu::PerformAction\n" + subMenu);
+
         gameObject.SetActive(false);
         subMenus[subMenu].Open();
     }
