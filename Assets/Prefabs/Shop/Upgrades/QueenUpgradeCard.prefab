@@ -32,22 +32,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 59.6357
-      objectReference: {fileID: 0}
-    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 93
-      objectReference: {fileID: 0}
-    - target: {fileID: 1359106854457217426, guid: 65528bae59aaf284b8128b650018359c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1535086110608389732, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_text
       value: Queen Bee

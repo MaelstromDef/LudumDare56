@@ -48,7 +48,7 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
         }
 
         CurrencyManager.instance.ClaimHoney(GetCost());
-        upgradeCost += (int)((float)upgradeCost * upgradeCostIncreaseMultiplier);
+        upgradeCost = (int)((float)upgradeCost * upgradeCostIncreaseMultiplier);
         hive.PurchaseQueenBeeUpgrade();
     }
 

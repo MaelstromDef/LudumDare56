@@ -268,6 +268,10 @@ PrefabInstance:
       value: ShopMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7938626752296430333, guid: c8807dcb22e97774a9917a641a8041b5, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 1982182605036784235}
+    - target: {fileID: 7938626752296430333, guid: c8807dcb22e97774a9917a641a8041b5, type: 3}
       propertyPath: 'upgrades.Array.data[1]'
       value: 
       objectReference: {fileID: 1321875101260111326, guid: b51ab8a86801e264886691bfe9159a1b, type: 3}
