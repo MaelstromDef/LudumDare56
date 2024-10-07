@@ -211,6 +211,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &25915733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3895303687502520990, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+  m_PrefabInstance: {fileID: 185477552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &185477552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,6 +271,14 @@ PrefabInstance:
     - target: {fileID: 3895303687502520990, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 24799612}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762708823956127580, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -378,6 +391,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &561416088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3895303687502520990, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+  m_PrefabInstance: {fileID: 1945414273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &637338487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,15 +597,15 @@ PrefabInstance:
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: 'hives.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 561416088}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: 'hives.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 25915733}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: 'hives.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2084835621}
     - target: {fileID: 6926790753711726411, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_Camera
       value: 
@@ -997,7 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c39c7fed172b04cb70d55e4ca1fce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFlowers: 50
+  maxFlowers: 75
   flowerPrefab: {fileID: 4022778515862365817, guid: 780e4ad28ea7cd3409f57c042b346cd7, type: 3}
   respawnDelay: 1
   debugging: 0
@@ -1072,6 +1090,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 24799612}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762708823956127580, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.09500122
@@ -1141,6 +1167,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 24799612}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762708823956127580, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.694
@@ -1206,6 +1240,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiveAndShop
       objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 24799612}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762708823956127580, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.493042
@@ -1219,6 +1265,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+--- !u!1 &2084835621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3895303687502520990, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+  m_PrefabInstance: {fileID: 1690519499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1226,7 +1277,6 @@ SceneRoots:
   - {fileID: 24799613}
   - {fileID: 1165431790}
   - {fileID: 1487409235}
-  - {fileID: 473026743}
   - {fileID: 637338487}
   - {fileID: 1985749818}
   - {fileID: 1945414273}
@@ -1236,3 +1286,4 @@ SceneRoots:
   - {fileID: 1335303842}
   - {fileID: 1265287836}
   - {fileID: 816442543}
+  - {fileID: 473026743}
