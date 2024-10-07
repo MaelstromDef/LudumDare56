@@ -393,7 +393,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 3c27f3d879dc10f4299dcde73d2441ac, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 69a54428a81406c4fac327aec7e8344f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 3c27f3d879dc10f4299dcde73d2441ac, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: e9acc0b7a02e9b74e9a17c1c91aeb0ee, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -867,18 +867,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4697726847442391559}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8432840126770954312}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
@@ -886,12 +898,28 @@ PrefabInstance:
       value: PerformAction
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: HivePurchasingMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 91996835b49cb2a4b9c0b61c8f53c6a8, type: 3}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138906597464999174, guid: a6fd1fb7f54a4b043a5a56e4e3522547, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
