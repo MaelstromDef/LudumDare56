@@ -118,6 +118,10 @@ public class Bee : MonoBehaviour, IEntity
         Destroy(gameObject);
     }
 
+    public void setFlowersToVisit(int numFlowers) {
+        flowersToVisit = numFlowers;
+    }
+
     #endregion
 
     #region Destination

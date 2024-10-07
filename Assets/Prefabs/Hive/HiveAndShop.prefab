@@ -43,7 +43,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 894575041832107444, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: requiredNectar
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 894575041832107444, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: honeyGenerationTime
