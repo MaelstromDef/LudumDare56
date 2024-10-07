@@ -7,6 +7,7 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
     [SerializeField] string upgradeName = "Queen Bee";
     [SerializeField] string upgradeDesc = "Automatically sends out workers from a hive at a rate of 1/s (increased at higher levels)";
     [SerializeField] int upgradeCost = 10;
+    [SerializeField] float upgradeCostIncreaseMultiplier = 1.5f;
 
     // UI Feedback
     [Header("UI")]
@@ -47,7 +48,8 @@ public class QueenBeeUpgrade : MonoBehaviour, IUpgrade
         }
 
         CurrencyManager.instance.ClaimHoney(GetCost());
-        hive.GetBeeSpawner().ActivateQueenBee();
+        upgradeCost += (int)((float)upgradeCost * upgradeCostIncreaseMultiplier);
+        hive.PurchaseQueenBeeUpgrade();
     }
 
     public Hive GetHive()

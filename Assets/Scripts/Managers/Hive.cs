@@ -24,6 +24,8 @@ public class Hive : MonoBehaviour, IDestination {
     // Upgrades
     [Header("Upgrades")]
     [SerializeField] Shop shop;
+    [SerializeField] float spawnTimeMultiplier = 0.75f;
+    [SerializeField] int spawnQuantityAdder = 0;
 
     // Events
     [Header("Unity Events")]
@@ -152,10 +154,25 @@ public class Hive : MonoBehaviour, IDestination {
 
     #region Upgrades
 
-    public void ActivateQueenBee()
+    public void PurchaseQueenBeeUpgrade()
     {
-        beeSpawner.ActivateQueenBee();
-        queenSprite.SetActive(true);
+        // First purchase
+        if (!beeSpawner.IsQueenBeeActive())
+        {
+            beeSpawner.ActivateQueenBee();
+            queenSprite.SetActive(true);
+        }
+        else
+        {
+            // Subsequent purchases
+            float spawnTime = beeSpawner.GetSpawnTime();
+            spawnTime *= spawnTimeMultiplier;
+            beeSpawner.SetSpawnTime(spawnTime);
+
+            int spawnQuantity = beeSpawner.GetBeeSpawnQuantity();
+            spawnQuantity += spawnQuantityAdder;
+            beeSpawner.SetBeeSpawnQuantity(spawnQuantity);
+        }
     }
 
     #endregion
