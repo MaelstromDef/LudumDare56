@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 47.8184
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 43.4551
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -84.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 603809190257454777, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000021935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535086110608389732, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_text
+      value: Honey Efficiency
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535086110608389732, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_fontSize
+      value: 22.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3817386498842200506, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -92,6 +116,10 @@ PrefabInstance:
       propertyPath: action
       value: Efficieny
       objectReference: {fileID: 0}
+    - target: {fileID: 7404062062948525552, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7030717583016713494, guid: 15bcef3499231a448b4a7474289c98db, type: 3}
     - target: {fileID: 7739719983399385581, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_Name
       value: HoneyProduction
