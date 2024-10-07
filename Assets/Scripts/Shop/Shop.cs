@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    // Singleton
-    public static Shop instance;
-
     // Actions
     [Header("Action Names")]
     [SerializeField] public string queenBee = "Queen Bee";
@@ -17,21 +14,6 @@ public class Shop : MonoBehaviour
     [Header("Upgrades")]
     [SerializeField] List<GameObject> upgradeObjs = new List<GameObject>();
     List<IUpgrade> upgrades = new List<IUpgrade>();
-
-    #region Unity
-
-    private void Awake()
-    {
-        if(instance != null)
-        {
-            Destroy(this);
-            return;
-        }
-
-        instance = this;
-    }
-
-    #endregion
 
     #region Shop
 
