@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,9 +8,9 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
 
     // Generation
     [Header("Generation Parameters")]
-    [SerializeField] float honeyGenerationTime = 1.0f;
+    [SerializeField] float honeyGenerationTime = 0.5f;
     [SerializeField] int honeyGenerationYield = 1;
-    [SerializeField] int requiredNectar = 1;
+    [SerializeField] int requiredNectar = 50;
     float stopwatch = 0;
 
     bool generate = false;
@@ -130,6 +131,14 @@ public class HoneyGenerator : MonoBehaviour, IGenerator
         stopwatch = 0;
         generate = shouldGenerate;
         hive.SetSprite(generate);
+    }
+
+    public void SetRequiredNectar(int newRequiredNectar) {
+        requiredNectar = newRequiredNectar;
+    }
+
+    public void SetGenerationYield(int newGenerationYield) {
+        honeyGenerationYield = newGenerationYield;
     }
 
     #endregion

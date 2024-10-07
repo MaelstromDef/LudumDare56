@@ -975,6 +975,7 @@ MonoBehaviour:
   - {fileID: 7350302488619615772}
   - {fileID: 6699869698513375298}
   - {fileID: 1998309271691690618}
+  shop: {fileID: 0}
 --- !u!1 &7350302488619615772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9092161387506120303
 RectTransform:
   m_ObjectHideFlags: 0

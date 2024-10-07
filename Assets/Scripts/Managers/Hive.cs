@@ -158,6 +158,14 @@ public class Hive : MonoBehaviour, IDestination {
         queenSprite.SetActive(true);
     }
 
+    public void IncreaseEfficiecy() {
+        if (honeyGenerator.GetRequiredNectar() > 1){
+            honeyGenerator.SetRequiredNectar(honeyGenerator.GetRequiredNectar() - 1);
+        } else {
+            honeyGenerator.SetGenerationYield(honeyGenerator.GetYield() + 1);
+        }
+    }
+
     #endregion
 
     #region IDestination
