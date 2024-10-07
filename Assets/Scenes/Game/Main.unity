@@ -658,6 +658,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 24799612}
+    - target: {fileID: 8779792381986168241, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779792381986168241, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779792381986168241, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779792381986168241, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HivePurchasingMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8988343422441066979, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_Pivot.x
       value: 0
