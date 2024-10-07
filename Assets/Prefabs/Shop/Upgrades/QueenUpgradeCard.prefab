@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: action
       value: Queen Bee
       objectReference: {fileID: 0}
+    - target: {fileID: 5831832281423233957, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: description
+      value: Automatically sends out workers from the hive (increased at higher levels)
+      objectReference: {fileID: 0}
     - target: {fileID: 7404062062948525552, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_Sprite
       value: 

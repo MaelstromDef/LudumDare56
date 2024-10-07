@@ -116,6 +116,10 @@ PrefabInstance:
       propertyPath: action
       value: Efficiency
       objectReference: {fileID: 0}
+    - target: {fileID: 5831832281423233957, guid: 65528bae59aaf284b8128b650018359c, type: 3}
+      propertyPath: description
+      value: Honey yield per nectar increase.
+      objectReference: {fileID: 0}
     - target: {fileID: 7404062062948525552, guid: 65528bae59aaf284b8128b650018359c, type: 3}
       propertyPath: m_Sprite
       value: 
