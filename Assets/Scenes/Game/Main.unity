@@ -570,6 +570,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1064400479249442937, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_fontSize
       value: 20
@@ -618,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8944975828638417301, guid: 8949c7911a3c6f64fa2923c3970ca470, type: 3}
+    - target: {fileID: 3386243611401342505, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.299999
+      objectReference: {fileID: 0}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: hiveCost
       value: 5
@@ -638,6 +646,10 @@ PrefabInstance:
       propertyPath: 'hives.Array.data[2]'
       value: 
       objectReference: {fileID: 2084835621}
+    - target: {fileID: 5454626673591211862, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5798910722916748287, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5
@@ -1281,6 +1293,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 24799612}
+    - target: {fileID: 4147538684940238034, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
