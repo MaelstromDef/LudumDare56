@@ -967,6 +967,8 @@ MonoBehaviour:
   btnPrev: {fileID: 1942467605267777228}
   upgrades:
   - {fileID: 2829947085549254966, guid: 309fdd0e60f9c7844b521b2938bf4d29, type: 3}
+  - {fileID: 1321875101260111326, guid: b51ab8a86801e264886691bfe9159a1b, type: 3}
+  - {fileID: 5946065098432645073, guid: 583652b6830d7ad4dbe08fed61381996, type: 3}
   pageSlots:
   - {fileID: 7350302488619615772}
   - {fileID: 6699869698513375298}
