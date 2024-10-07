@@ -89,6 +89,14 @@ PrefabInstance:
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 8463473794745413638}
+    - target: {fileID: 5756961463433049208, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756961463433049208, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6407739242598460994, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: m_Name
       value: Hive
@@ -148,10 +156,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2427854141365077702}
     m_Modifications:
+    - target: {fileID: 3289488591263039390, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.1772
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289488591263039390, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.1584
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289488591263039390, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.49301147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289488591263039390, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -449.828
+      objectReference: {fileID: 0}
     - target: {fileID: 5631821297739305408, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 7756665890094895969, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8944975828638417301, guid: 8949c7911a3c6f64fa2923c3970ca470, type: 3}
     - target: {fileID: 8504193595519014221, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9919343
@@ -193,7 +221,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1590026859008958586, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96ad78f0f4e977f4f918ca5cb34c3b84, type: 3}
