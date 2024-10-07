@@ -183,6 +183,11 @@ public class Hive : MonoBehaviour, IDestination {
         }
     }
 
+    public void PurchaseFlowerVisitIncrease()
+    {
+        beeSpawner.FlowerIncrease();
+    }
+
     #endregion
 
     #region IDestination

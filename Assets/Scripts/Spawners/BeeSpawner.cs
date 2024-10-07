@@ -14,8 +14,10 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     [SerializeField] GameObject beePrefab;
 
-    int flowersToVisit = 1;
-    bool flowerUpgrade = false;
+    // Flowers to visit
+    [SerializeField] int flowersToVisit = 1;
+    float chanceToVisitMore = 0f;
+    [SerializeField] float chanceToVisitMoreIncrease = 0.05f;
 
     // Queen Bee
     [Header("Queen Bee")]
@@ -136,13 +138,19 @@ public class BeeSpawner : MonoBehaviour, ISpawner
     #endregion
 
     #region FlowerToVisit
-    public void ActivateFlowerIncrease() {
+
+    public void FlowerIncrease() {
         if (printMethodCalls) Debug.Log("BeeSpawner::ActivateFlowerUpgrade");
 
-        flowerUpgrade = true;
+        chanceToVisitMore += chanceToVisitMoreIncrease;
+        if(chanceToVisitMore >= 1)
+        {
+            flowersToVisit++;
+            chanceToVisitMore -= 1;
+        }
     }
 
-    
+    #endregion
 
     #region ISpawner
 
@@ -155,12 +163,20 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
         if (bees.Count < maxBees)
         {
+            // Instantiate bee
             GameObject beeObj = Instantiate(beePrefab, transform);
             Bee bee = beeObj.GetComponent<Bee>();
             bee.SetSpawner(this);
-            bee.setFlowersToVisit(flowersToVisit);
-            bees.Add(bee);
 
+            // Modify flowers to visit
+            int flowers = flowersToVisit;
+            float chance = UnityEngine.Random.Range(0f, 1f);
+            if (chance < chanceToVisitMore) flowers++;
+
+            bee.setFlowersToVisit(flowers);
+
+            // Spawn
+            bees.Add(bee);
             bee.Spawn();
         }
     }
