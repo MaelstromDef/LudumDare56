@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c39c7fed172b04cb70d55e4ca1fce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFlowers: 7
+  maxFlowers: 50
   flowerPrefab: {fileID: 4022778515862365817, guid: 780e4ad28ea7cd3409f57c042b346cd7, type: 3}
   respawnDelay: 1
   debugging: 0
@@ -621,15 +621,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.1487484
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.022766434
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.027277585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2427854141365077702, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: m_LocalRotation.w
@@ -671,10 +671,22 @@ PrefabInstance:
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 1756927718}
+    - target: {fileID: 7877736453216286673, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8626106219809439791, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 1756927721}
+    - target: {fileID: 9032594891669756512, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032594891669756512, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
