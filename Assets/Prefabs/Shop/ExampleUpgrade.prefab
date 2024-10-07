@@ -773,7 +773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtPrice: {fileID: 2899158264804541741}
   btnBuy: {fileID: 7530002455437558097}
-  popupPrefab: {fileID: 0}
+  popupPrefab: {fileID: 1231845260691058509, guid: a88df7cc0f65c5f41b50f4fe04766531, type: 3}
   action: Example Action
   description: 
 --- !u!1 &8304003422309374019
