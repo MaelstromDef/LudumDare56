@@ -14,6 +14,9 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     [SerializeField] GameObject beePrefab;
 
+    int flowersToVisit = 1;
+    bool flowerUpgrade = false;
+
     // Queen Bee
     [Header("Queen Bee")]
     [SerializeField] float beeSpawnTime = 1;
@@ -132,6 +135,15 @@ public class BeeSpawner : MonoBehaviour, ISpawner
 
     #endregion
 
+    #region FlowerToVisit
+    public void ActivateFlowerIncrease() {
+        if (printMethodCalls) Debug.Log("BeeSpawner::ActivateFlowerUpgrade");
+
+        flowerUpgrade = true;
+    }
+
+    
+
     #region ISpawner
 
     /// <summary>
@@ -146,6 +158,7 @@ public class BeeSpawner : MonoBehaviour, ISpawner
             GameObject beeObj = Instantiate(beePrefab, transform);
             Bee bee = beeObj.GetComponent<Bee>();
             bee.SetSpawner(this);
+            bee.setFlowersToVisit(flowersToVisit);
             bees.Add(bee);
 
             bee.Spawn();
