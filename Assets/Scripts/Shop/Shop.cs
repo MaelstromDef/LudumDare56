@@ -17,6 +17,17 @@ public class Shop : MonoBehaviour
 
     #region Shop
 
+    public int GetPrice(string upgradeName)
+    {
+        foreach(IUpgrade upgrade in GetUpgrades())
+        {
+            if (upgrade.GetName().Equals(upgradeName)) return upgrade.GetCost();
+        }
+
+        Debug.LogError("Upgrade " + upgradeName + " not found.");
+        return 0;
+    }
+
     public void PerformAction(string action)
     {
         foreach(IUpgrade upgrade in GetUpgrades())
