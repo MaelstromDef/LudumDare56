@@ -102,6 +102,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6745849537273924265}
     - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: queenSprite
+      value: 
+      objectReference: {fileID: 7877736453216286673}
+    - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 8626106219809439791}
@@ -113,6 +117,11 @@ PrefabInstance:
 --- !u!4 &1005524232418749603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4560662319229305531, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+  m_PrefabInstance: {fileID: 3656620263164997144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7877736453216286673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6912386961939093961, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
   m_PrefabInstance: {fileID: 3656620263164997144}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &8463473794745413638 stripped

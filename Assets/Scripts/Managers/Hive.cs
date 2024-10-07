@@ -18,7 +18,7 @@ public class Hive : MonoBehaviour, IDestination {
     //Sprite Management
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
-    public GameObject queenSprite;
+    [SerializeField] GameObject queenSprite;
     [SerializeField] HiveAnimator hiveAnimator;
 
     // Upgrades
@@ -41,8 +41,6 @@ public class Hive : MonoBehaviour, IDestination {
         HoneyGeneratorInit();
         UpgradesInit();
         CurrencyManagerInit();
-
-        queenSprite = GameObject.Find("hive/graphic/Queen Bee");
     }
 
 
