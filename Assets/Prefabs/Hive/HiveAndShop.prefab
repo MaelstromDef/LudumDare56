@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6262864577869153663, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: chanceToVisitMoreIncrease
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6407739242598460994, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
       propertyPath: m_Name
       value: Hive
@@ -125,6 +129,10 @@ PrefabInstance:
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 8626106219809439791}
+    - target: {fileID: 8690255572864436041, guid: fedcbbf6848b2f044b8d5ad0c2b63748, type: 3}
+      propertyPath: spawnTimeMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

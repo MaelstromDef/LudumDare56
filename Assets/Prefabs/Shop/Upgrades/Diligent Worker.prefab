@@ -47,7 +47,7 @@ MonoBehaviour:
   upgradeName: Diligent Workers
   upgradeDesc: "Workers have a percent chance of being \u201Cdiligent\u201D. Diligent
     workers have a percent chance to harvest more flowers."
-  upgradeCost: 10
+  upgradeCost: 1
   upgradeCostIncreaseMultiplier: 1.5
   popupPrefab: {fileID: 1231845260691058509, guid: a88df7cc0f65c5f41b50f4fe04766531, type: 3}
   debugging: 0

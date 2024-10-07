@@ -397,6 +397,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3494549750911928452}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: cf9a5685caae3b045a8d3f718281f76e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7172510679988478579
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtPrice: {fileID: 2899158264804541741}
   btnBuy: {fileID: 7530002455437558097}
+  popupPrefab: {fileID: 0}
   action: Example Action
+  description: 
 --- !u!1 &8304003422309374019
 GameObject:
   m_ObjectHideFlags: 0
