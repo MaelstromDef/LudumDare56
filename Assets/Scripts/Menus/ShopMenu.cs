@@ -16,6 +16,8 @@ public class ShopMenu : MonoBehaviour, IMenu
     [SerializeField] List<GameObject> pageSlots = new List<GameObject>();   // Number of upgrades to have on each page.
     int currentPage = 0;
 
+    [SerializeField] Shop shop;
+
     #region Unity
 
     private void Start()
@@ -173,7 +175,7 @@ public class ShopMenu : MonoBehaviour, IMenu
     /// <param name="actionName">Action to perform.</param>
     public void PerformAction(string actionName)
     {
-        Shop.instance.PerformAction(actionName);
+        shop.PerformAction(actionName);
     }
 
     #endregion
