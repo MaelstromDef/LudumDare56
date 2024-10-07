@@ -48,7 +48,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   nectarGenerationTime: 1
-  nectarGenerationYield: 1
+  nectarGenerationYield: 2
   maxNectar: 10
   capNectar: 1
   debugging: 0
