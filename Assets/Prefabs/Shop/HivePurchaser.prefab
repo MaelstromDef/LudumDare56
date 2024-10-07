@@ -124,7 +124,7 @@ MonoBehaviour:
   popupPrefab: {fileID: 1231845260691058509, guid: a88df7cc0f65c5f41b50f4fe04766531, type: 3}
   hiveCostPreamble: 'Hive Cost: '
   hives: []
-  hiveCost: 100
+  hiveCost: 50
   hiveCostMultiplier: 1.5
 --- !u!1 &2782822882627170181
 GameObject:
