@@ -570,14 +570,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
+    - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8289197922812065765, guid: 29a3e3e785b4a2d488a174d1db591b4a, type: 2}
+    - target: {fileID: 1998011586661731208, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2703601388226900544, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_Name
       value: HivePurchaser
       objectReference: {fileID: 0}
     - target: {fileID: 2884725405125383368, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884725405125383368, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884725405125383368, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: -229.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884725405125383368, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3210656326882191078, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210656326882191078, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8944975828638417301, guid: 8949c7911a3c6f64fa2923c3970ca470, type: 3}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: hiveCost
       value: 5
@@ -598,6 +638,10 @@ PrefabInstance:
       propertyPath: 'hives.Array.data[2]'
       value: 
       objectReference: {fileID: 2084835621}
+    - target: {fileID: 5798910722916748287, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6926790753711726411, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: m_Camera
       value: 
@@ -683,7 +727,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3023701742445232184, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
