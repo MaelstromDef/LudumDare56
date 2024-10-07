@@ -39,8 +39,7 @@ public class StartMenu : MonoBehaviour, IMenu
     /// </summary>
     public void NextPage()
     {
-        Debug.Log(SceneManager.sceneCount);
-        for(int i = 0; i < SceneManager.sceneCount; i++) Debug.Log(SceneManager.GetSceneAt(i).name);
+        SceneManager.LoadScene("Main");
     }
 
     /// <summary>

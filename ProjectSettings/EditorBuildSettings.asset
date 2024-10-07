@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game/TitleScreen.unity
-    guid: 5f2e62814019f4d4cbe0072a32bdfba4
-  - enabled: 1
     path: Assets/Scenes/Game/Main.unity
     guid: 7b85171c90a36d34087159a48525a4b4
+  - enabled: 1
+    path: Assets/Scenes/Game/TitleScreen.unity
+    guid: 5f2e62814019f4d4cbe0072a32bdfba4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
