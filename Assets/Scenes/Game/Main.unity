@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: hiveCost
-      value: 150
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4697726847442391559, guid: 6b81da6f3eb766d4a9fd0a76ddf78f30, type: 3}
       propertyPath: hives.Array.size
