@@ -100,6 +100,9 @@ public class ShopMenu : MonoBehaviour, IMenu
             string action = card.GetAction();
 
             btnBuy.GetComponent<Button>().onClick.AddListener(() => PerformAction(action));
+
+            // Set price
+            card.SetPriceText(shop.GetPrice(action));
         }
     }
 
@@ -176,6 +179,14 @@ public class ShopMenu : MonoBehaviour, IMenu
     public void PerformAction(string actionName)
     {
         shop.PerformAction(actionName);
+
+        foreach(GameObject slot in pageSlots)
+        {
+            if (slot.transform.childCount == 0) return;
+
+            UpgradeCard card = slot.transform.GetChild(0).GetComponent<UpgradeCard>();
+            if(card.GetAction().Equals(actionName)) card.SetPriceText(shop.GetPrice(actionName));
+        }
     }
 
     #endregion

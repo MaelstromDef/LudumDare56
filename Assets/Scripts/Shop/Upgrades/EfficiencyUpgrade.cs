@@ -3,7 +3,7 @@ using UnityEngine;
 public class EfficiencyUpgrade : MonoBehaviour, IUpgrade {
     // Upgrade
     [Header("Upgrades")]
-    [SerializeField] string upgradeName = "Honey Efficiency";
+    [SerializeField] string upgradeName = "Efficiency";
     [SerializeField] string upgradeDesc = "Decreases the amount of nectar required to poduce honey.";
     [SerializeField] int upgradeCost = 5;
     [SerializeField] float upgradeCostIncreaseMultiplier = 1.5f;

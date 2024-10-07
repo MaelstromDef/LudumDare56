@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e2d47ba0eb08e4ea16b750c1d95238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Honey Efficiency
+  upgradeName: Efficiency
   upgradeDesc: Decreases the amount of nectar required to poduce honey.
   upgradeCost: 5
+  upgradeCostIncreaseMultiplier: 1.5
   popupPrefab: {fileID: 0}
   debugging: 0

@@ -16,6 +16,8 @@ public class PopUp : MonoBehaviour
 
     public void Close()
     {
+        Debug.Log("POPUP CLOSE!!!");
+
         GameObject myEventSystem = GameObject.Find("EventSystem");
         myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
         gameObject.SetActive(false);

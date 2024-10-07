@@ -52,6 +52,7 @@ MonoBehaviour:
   efficiency: Efficiency
   upgradeObjs:
   - {fileID: 2745822229789338700}
+  - {fileID: 1023975267246486780}
 --- !u!1 &5612156981525506921
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +247,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8bfc2eca7a644f4db02ec4f9a423de0, type: 3}
+--- !u!1 &1023975267246486780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6891706105450540122, guid: b8bfc2eca7a644f4db02ec4f9a423de0, type: 3}
+  m_PrefabInstance: {fileID: 5877661666149537958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5703302973716423778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2213402611611991236, guid: b8bfc2eca7a644f4db02ec4f9a423de0, type: 3}
