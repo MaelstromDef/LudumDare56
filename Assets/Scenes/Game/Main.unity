@@ -570,26 +570,10 @@ PrefabInstance:
       propertyPath: requiredNectar
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4527462893840815020, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: honeyGenerationTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343258895940872529, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: queenSprite
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5343258895940872529, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: hiveAnimator
       value: 
       objectReference: {fileID: 1756927718}
-    - target: {fileID: 6131680324374903982, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877736453216286673, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8626106219809439791, guid: f748dc065eeaa574c994692ad5a44924, type: 3}
       propertyPath: hiveAnimator
       value: 
